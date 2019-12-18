@@ -4,22 +4,24 @@ layout: default
 parent: Tags
 ---
 # {{page.type}}
-
-# Components and Properties
+{% for alias in page.aliases %}
+{{alias}}
+{: .label .label-yellow }
+{% endfor %}
+## Components and Properties
 {% for component in page.components %}
 {% assign typehandler = site.data.TypeHandlers | where: "type", component | first %}
-## {{typehandler.type}}
+### {{typehandler.type}}
 {% for property in typehandler.properties %}
-### {{property.aliases[0]}}
+{% for alias in property.aliases %}
+{{alias}}
+{: .label .label-blue }
+{% endfor %}
+
 {{property.type}}
 {: .label .label-green }
 {{property.description}}
-{% if property.aliases.size > 1 %}
-#### Aliases:
-{% for alias in property.aliases %}
-* {{alias}}
-{: .fs-3 }
-{% endfor %}
-{% endif %}
+
+
 {% endfor %}
 {% endfor %}
