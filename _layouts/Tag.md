@@ -8,6 +8,7 @@ parent: Tags
 {{alias}}
 {: .label .label-yellow }
 {% endfor %}
+{% include tag_top/{{page.type}}.md %}
 ## Components and Properties
 {% for component in page.components %}
 {% assign typehandler = site.data.TypeHandlers | where: "type", component | first %}
@@ -25,3 +26,5 @@ parent: Tags
 
 {% endfor %}
 {% endfor %}
+
+{% include tag_bottom/{{page.type}}.md %}
