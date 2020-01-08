@@ -359,6 +359,16 @@
     description: The height of this RectTransform relative to the distances between the anchors.
     aliases:
     - size-delta-y
+  - name: pivotX
+    type: float
+    description: Normalized x position to rotate around
+    aliases:
+    - pivot-x
+  - name: pivotY
+    type: float
+    description: Normalized y position to rotate around
+    aliases:
+    - pivot-y
   - name: hoverHint
     type: string
     description: Text that will appear when a pointer hovers over
@@ -427,6 +437,11 @@
     description: How to handle text overflow
     aliases:
     - overflow-mode
+  - name: wordWrapping
+    type: bool
+    description: Whether or not to wrap text
+    aliases:
+    - word-wrapping
   - name: bold
     type: bool
     description: Whether or not text is bold
@@ -559,3 +574,79 @@
     description: Whether or not to use int or float
     aliases:
     - integer-only
+- type: Strokable
+  properties:
+  - name: strokeColor
+    type: color string
+    description: Color of the stroke
+    aliases:
+    - stroke-color
+  - name: strokeType
+    type: StrokeType
+    description: Type of stroke
+    aliases:
+    - stroke-type
+- type: Image
+  properties:
+  - name: image
+    type: resource path
+    description: Path to image to use as Sprite. You can also prefix this with a \# to search for a Sprite from the base game.
+    aliases:
+    - source
+    - src
+  - name: preserveAspect
+    type: bool
+    description: Whether or not to preserve the aspect ratio of the image
+    aliases:
+    - preserve-aspect
+- type: RawImage
+  properties:
+  - name: image
+    type: resource path
+    description: Path to image to use as Texture. You can also prefix this with a \# to search for a Texture from the base game.
+    aliases:
+    - source
+    - src
+- type: TextSegmentedControl
+  properties:
+  - name: selectCell
+    type: UIAction<SegmentedControl, int>
+    description: Invoked when a cell is selected, parameters give you the SegmentedControl component and index of the selected cell.
+    aliases:
+    - select-cell
+  - name: data
+    type: List<object>
+    description: List of cells, uses ToString of object for text value.
+    aliases:
+    - contents
+    - data
+- type: IconSegmentedControl
+  properties:
+  - name: selectCell
+    type: UIAction<SegmentedControl, int>
+    description: Invoked when a cell is selected, parameters give you the SegmentedControl component and index of the selected cell.
+    aliases:
+    - select-cell
+  - name: data
+    type: List<IconSegmentedControl.DataItem>
+    description: List of cells.
+    aliases:
+    - contents
+    - data
+- type: ButtonIconImage
+  properties:
+  - name: icon
+    type: resource path
+    description: Path to image to use as icon Sprite.
+    aliases:
+    - icon
+- type: ButtonArtworkImage
+  properties:
+  - name: artwork
+    type: resource path
+    description: Path to image to use as background Sprite.
+    aliases:
+    - artwork
+    - art
+    - bg-artwork
+    - bg-art

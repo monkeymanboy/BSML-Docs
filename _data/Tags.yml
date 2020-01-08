@@ -7,6 +7,16 @@
   - Backgroundable
   - ContentSizeFitter
   - RectTransform
+- type: BigButtonTag
+  aliases:
+  - big-button
+  components:
+  - Button
+  - ButtonIconImage
+  - LayoutElement
+  - RectTransform
+  - Strokable
+  - TextMeshProUGUI
 - type: BottomButtonPanelTag
   aliases:
   - bottom-button-panel
@@ -25,6 +35,7 @@
   - LayoutElement
   - LayoutGroup
   - RectTransform
+  - Strokable
   - TextMeshProUGUI
 - type: ClickableTextTag
   aliases:
@@ -59,16 +70,45 @@
   - LayoutElement
   - LayoutGroup
   - RectTransform
+- type: ButtonWithIconTag
+  aliases:
+  - button-with-icon
+  - icon-button
+  components:
+  - Button
+  - ButtonIconImage
+  - HorizontalOrVerticalLayoutGroup
+  - LayoutElement
+  - LayoutGroup
+  - RectTransform
+  - Strokable
+- type: IconSegmentedControlTag
+  aliases:
+  - icon-segments
+  components:
+  - HorizontalOrVerticalLayoutGroup
+  - IconSegmentedControl
+  - LayoutGroup
+  - RectTransform
 - type: ImageTag
   aliases:
-  - image
+  - img
   components:
+  - Image
+  - LayoutElement
+  - RectTransform
+- type: RawImageTag
+  aliases:
+  - raw-image
+  components:
+  - RawImage
   - LayoutElement
   - RectTransform
 - type: LeaderboardTag
   aliases:
   - leaderboard
   components:
+  - Image
   - LeaderboardTableView
   - RectTransform
 - type: ListTag
@@ -78,11 +118,20 @@
   - CustomListTableData
   - LayoutElement
   - RectTransform
+- type: LoadingIndicatorTag
+  aliases:
+  - loading
+  - loading-indicator
+  components:
+  - Image
+  - LayoutElement
+  - RectTransform
 - type: ModalKeyboardTag
   aliases:
   - modal-keyboard
   components:
   - Backgroundable
+  - Image
   - ModalKeyboard
   - ModalView
   - RectTransform
@@ -91,6 +140,7 @@
   - modal
   components:
   - Backgroundable
+  - Image
   - ModalView
   - RectTransform
 - type: PageButtonTag
@@ -99,6 +149,7 @@
   - pg-button
   components:
   - Button
+  - ButtonIconImage
   - ContentSizeFitter
   - Glowable
   - LayoutElement
@@ -122,6 +173,15 @@
   - LayoutElement
   - LayoutGroup
   - RectTransform
+- type: StackLayoutTag
+  aliases:
+  - stack
+  components:
+  - Backgroundable
+  - ContentSizeFitter
+  - LayoutElement
+  - LayoutGroup
+  - RectTransform
 - type: TabSelectorTag
   aliases:
   - tab-select
@@ -131,6 +191,7 @@
   - LayoutGroup
   - RectTransform
   - TabSelector
+  - TextSegmentedControl
 - type: TabTag
   aliases:
   - tab
@@ -145,6 +206,14 @@
   components:
   - RectTransform
   - TextPageScrollView
+- type: TextSegmentedControlTag
+  aliases:
+  - text-segments
+  components:
+  - HorizontalOrVerticalLayoutGroup
+  - LayoutGroup
+  - RectTransform
+  - TextSegmentedControl
 - type: TextTag
   aliases:
   - text
