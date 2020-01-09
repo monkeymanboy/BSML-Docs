@@ -374,6 +374,11 @@
     description: Text that will appear when a pointer hovers over
     aliases:
     - hover-hint
+  - name: active
+    type: bool
+    description: Whether or not the GameObject this RectTransform belongs to is active
+    aliases:
+    - active
 - type: Tab
   properties:
   - name: tabName

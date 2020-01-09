@@ -1,0 +1,58 @@
+- type: AsHostMacro
+  description: Parses child nodes with a different host object
+  aliases:
+  - macro.as-host
+  properties:
+  - name: host
+    type: UIValue
+    description: Host object
+    aliases:
+    - host
+- type: DefineMacro
+  description: Defines a UIValue within a BSML template
+  aliases:
+  - macro.define
+  properties:
+  - name: name
+    type: string
+    description: ID of UIValue
+    aliases:
+    - name
+    - id
+  - name: value
+    type: string
+    description: Value to store in UIValue
+    aliases:
+    - value
+- type: ForEachMacro
+  description: Parses child nodes for every host object in a list
+  aliases:
+  - macro.for-each
+  properties:
+  - name: hosts
+    type: List<object>
+    description: Host object list
+    aliases:
+    - hosts
+    - items
+- type: IfMacro
+  description: Only parses child nodes if a value is true
+  aliases:
+  - macro.if
+  properties:
+  - name: value
+    type: UIValue(bool)
+    description: ID of bool UIValue, can be prefixed with ! operator to invert value
+    aliases:
+    - bool
+    - value
+- type: ReparentMacro
+  description: Reparents an existing Transform into the template hierarchy
+  aliases:
+  - macro.reparent
+  properties:
+  - name: transform
+    type: UIValue(Transform)
+    description: ID of UIValue that has the desired Transform
+    aliases:
+    - transform

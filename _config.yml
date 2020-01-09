@@ -20,3 +20,7 @@ page_gen:
     template: 'Tag'
     name: 'type'
     dir: 'Tags'
+  - data: 'Macros'
+    template: 'Macro'
+    name: 'type'
+    dir: 'Macros'

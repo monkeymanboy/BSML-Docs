@@ -19,7 +19,7 @@ parent: Tags
 {: .label .label-blue }
 {% endfor %}
 
-{{property.type}}
+{{property.type | escape}}
 {: .label .label-green }
 {{property.description}}
 
