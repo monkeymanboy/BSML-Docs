@@ -1,6 +1,7 @@
 - type: bool
-  patterns:
-  - true|false
+  values:
+  - true
+  - false
 - type: background string
   values:
   - round-rect-panel
