@@ -1,7 +1,7 @@
 - type: bool
   values:
-  - true
-  - false
+  - 'true'
+  - 'false'
 - type: background string
   values:
   - round-rect-panel
