@@ -1,0 +1,118 @@
+- type: bool
+  patterns:
+  - true|false
+- type: background string
+  values:
+  - round-rect-panel
+  - panel-bottom
+  - panel-top
+  - round-rect-panel-shadow
+- type: color string
+  patterns:
+  - ([#][a-fA-F0-9]*)
+  values:
+  - red
+  - cyan
+  - blue
+  - darkblue
+  - lightblue
+  - purple
+  - yellow
+  - lime
+  - fuchsia
+  - white
+  - silver
+  - grey
+  - black
+  - orange
+  - brown
+  - maroon
+  - green
+  - olive
+  - navy
+  - teal
+  - aqua
+  - magenta
+- type: PageButtonDirection
+  values:
+  - Up
+  - Down
+  - Left
+  - Right
+- type: TextAlignmentOptions
+  values:
+  - TopLeft
+  - Top
+  - TopRight
+  - TopJustified
+  - TopFlush
+  - TopGeoAligned
+  - Left
+  - Center
+  - Right
+  - Justified
+  - Flush
+  - CenterGeoAligned
+  - BottomLeft
+  - Bottom
+  - BottomRight
+  - BottomJustified
+  - BottomFlush
+  - BottomGeoAligned
+  - BaselineLeft
+  - Baseline
+  - BaselineRight
+  - BaselineJustified
+  - BaselineFlush
+  - BaselineGeoAligned
+  - MidlineLeft
+  - Midline
+  - MidlineRight
+  - MidlineJustified
+  - MidlineFlush
+  - MidlineGeoAligned
+  - CaplineLeft
+  - Capline
+  - CaplineRight
+  - CaplineJustified
+  - CaplineFlush
+  - CaplineGeoAligned
+- type: TextOverflowModes
+  values:
+  - Overflow
+  - Ellipsis
+  - Masking
+  - Truncate
+  - ScrollRect
+  - Page
+  - Linked
+- type: StrokeType
+  values:
+  - None
+  - Clean
+  - Regular
+- type: TextAnchor
+  values:
+  - UpperLeft
+  - UpperCenter
+  - UpperRight
+  - MiddleLeft
+  - MiddleCenter
+  - MiddleRight
+  - LowerLeft
+  - LowerCenter
+  - LowerRight
+- type: FitMode
+  values:
+  - Unconstrained
+  - MinSize
+  - PreferredSize
+- type: ListStyle
+  values:
+  - List
+  - Box
+  - Simple
+- type: TableType
+  values:
+  - Vertical
+  - Horizontal
