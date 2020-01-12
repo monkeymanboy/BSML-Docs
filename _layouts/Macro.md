@@ -8,6 +8,7 @@ parent: Macros
 {{alias}}
 {: .label .label-yellow }
 {% endfor %}
+{{page.description}}
 ## Properties
 {% for property in page.properties %}
 {% for alias in property.aliases %}

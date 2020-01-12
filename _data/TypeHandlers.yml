@@ -393,6 +393,26 @@
     description: Tag to use to search for tabs
     aliases:
     - tab-tag
+  - name: hasSeparator
+    type: bool
+    description: Whether or not to include a separator between cells
+    aliases:
+    - has-separator
+  - name: pageCount
+    type: int
+    description: Max amount of items to display, can bind buttons with tags to change page
+    aliases:
+    - page-count
+  - name: leftButtonTag
+    type: string
+    description: Tag to use to find left button
+    aliases:
+    - left-button-tag
+  - name: rightButtonTag
+    type: string
+    description: Tag to use to find right button
+    aliases:
+    - right-button-tag
 - type: TextMeshProUGUI
   properties:
   - name: text

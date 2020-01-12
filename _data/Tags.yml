@@ -97,6 +97,25 @@
   - Image
   - LayoutElement
   - RectTransform
+- type: ModifierContainerTag
+  aliases:
+  - modifier-container
+  components:
+  - Backgroundable
+  - ContentSizeFitter
+  - HorizontalOrVerticalLayoutGroup
+  - Image
+  - LayoutElement
+  - LayoutGroup
+  - RectTransform
+- type: ModifierTag
+  aliases:
+  - modifier
+  components:
+  - Image
+  - RectTransform
+  - TextMeshProUGUI
+  - GenericSetting
 - type: RawImageTag
   aliases:
   - raw-image
