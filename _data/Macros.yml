@@ -35,7 +35,6 @@
     aliases:
     - hosts
     - items
-  properties:
   - name: passTags
     type: bool
     description: Whether or not to pass back tagged objects to main BSMLParserParams
