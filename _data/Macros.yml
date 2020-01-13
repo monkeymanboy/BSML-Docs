@@ -30,7 +30,7 @@
   - macro.for-each
   properties:
   - name: hosts
-    type: List<object>
+    type: UIValue(List<object>)
     description: Host object list
     aliases:
     - hosts
@@ -52,7 +52,7 @@
     - bool
     - value
 - type: ReparentMacro
-  description: Reparents an existing Transform into the template hierarchy
+  description: Reparents an existing Transform or Transforms into the template hierarchy
   aliases:
   - macro.reparent
   properties:
@@ -61,3 +61,8 @@
     description: ID of UIValue that has the desired Transform
     aliases:
     - transform
+  - name: transforms
+    type: UIValue(List<Transform>)
+    description: ID of UIValue that has a list of Transforms
+    aliases:
+    - transforms
