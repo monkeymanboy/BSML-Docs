@@ -269,6 +269,28 @@
     description: Height of an entry
     aliases:
     - cell-size
+- type: ModalColorPicker
+  properties:
+  - name: value
+    type: UIValue(Color)
+    description: Will get from this value on open and set this value on completion
+    aliases:
+    - value
+  - name: onCancel
+    type: UIAction
+    description: Will call this UIAction when cancel is pressed
+    aliases:
+    - on-cancel
+  - name: onDone
+    type: UIAction<Color>
+    description: Will call this UIAction when done is pressed with the current Color
+    aliases:
+    - on-done
+  - name: onChange
+    type: UIAction<Color>
+    description: Will call this UIAction when the color changes before done is pressed
+    aliases:
+    - color-change
 - type: ModalKeyboard
   properties:
   - name: value

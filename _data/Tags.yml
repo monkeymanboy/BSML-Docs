@@ -97,6 +97,15 @@
   - Image
   - LayoutElement
   - RectTransform
+- type: ModalColorPickerTag
+  aliases:
+  - modal-color-picker
+  components:
+  - Backgroundable
+  - Image
+  - ModalColorPicker
+  - ModalView
+  - RectTransform
 - type: ModifierContainerTag
   aliases:
   - modifier-container
@@ -262,6 +271,14 @@
   aliases:
   - checkbox-setting
   - checkbox
+  components:
+  - LayoutElement
+  - RectTransform
+  - TextMeshProUGUI
+  - GenericSetting
+- type: ColorSettingTag
+  aliases:
+  - color-setting
   components:
   - LayoutElement
   - RectTransform
