@@ -1,7 +1,7 @@
 ---
 title: Interacting with your elements
 layout: default
-parent: Getting Started
+parent: Getting Started (old)
 ---
 # Accessing components in code
 Say we want to change that text we made earlier in code, well to do that we're gonna need a reference to it. First, we're gonna need to give that text an `id`, let's give it the id `some-text`

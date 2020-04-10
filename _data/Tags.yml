@@ -37,6 +37,14 @@
   - RectTransform
   - Strokable
   - TextMeshProUGUI
+- type: ClickableImageTag
+  aliases:
+  - clickable-image
+  components:
+  - ClickableImage
+  - Image
+  - LayoutElement
+  - RectTransform
 - type: ClickableTextTag
   aliases:
   - clickable-text
@@ -92,6 +100,7 @@
   - RectTransform
 - type: ImageTag
   aliases:
+  - image
   - img
   components:
   - Image

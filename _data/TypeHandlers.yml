@@ -30,6 +30,29 @@
     description: Whether or not the button is clickable
     aliases:
     - interactable
+- type: ClickableImage
+  properties:
+  - name: onClick
+    type: UIAction
+    description: UIAction that will fire on click
+    aliases:
+    - on-click
+  - name: clickEvent
+    type: event
+    description: Event that will fire on click
+    aliases:
+    - click-event
+    - event-click
+  - name: highlightColor
+    type: color string
+    description: Color when this image has a pointer over it
+    aliases:
+    - highlight-color
+  - name: defaultColor
+    type: color string
+    description: Default color of image
+    aliases:
+    - default-color
 - type: ClickableText
   properties:
   - name: onClick
@@ -43,6 +66,16 @@
     aliases:
     - click-event
     - event-click
+  - name: highlightColor
+    type: color string
+    description: Color when this text has a pointer over it
+    aliases:
+    - highlight-color
+  - name: defaultColor
+    type: color string
+    description: Default color of text
+    aliases:
+    - default-color
 - type: ContentSizeFitter
   properties:
   - name: horizontalFit
@@ -646,6 +679,11 @@
     description: Whether or not to preserve the aspect ratio of the image
     aliases:
     - preserve-aspect
+  - name: color
+    type: color string
+    description: Color of this image
+    aliases:
+    - color
 - type: RawImage
   properties:
   - name: image
