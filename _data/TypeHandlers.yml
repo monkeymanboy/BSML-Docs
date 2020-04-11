@@ -266,27 +266,27 @@
 - type: LayoutGroup
   properties:
   - name: padTop
-    type: float
+    type: int
     description: Top padding
     aliases:
     - pad-top
   - name: padBottom
-    type: float
+    type: int
     description: Bottom padding
     aliases:
     - pad-bottom
   - name: padLeft
-    type: float
+    type: int
     description: Left padding
     aliases:
     - pad-left
   - name: padRight
-    type: float
+    type: int
     description: Right padding
     aliases:
     - pad-right
   - name: pad
-    type: float
+    type: int
     description: Padding for all directions
     aliases:
     - pad
@@ -679,11 +679,12 @@
     description: Whether or not to preserve the aspect ratio of the image
     aliases:
     - preserve-aspect
-  - name: color
+  - name: imageColor
     type: color string
     description: Color of this image
     aliases:
-    - color
+    - image-color
+    - img-color
 - type: RawImage
   properties:
   - name: image

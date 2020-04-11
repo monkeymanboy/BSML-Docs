@@ -6,6 +6,8 @@ layout: default
 If you're new to BSML take a look at [Getting Started](Getting Started/Getting Started)
 
 # Patch Notes
+## Version 1.3.1
+- change image's `color` to `image-color`
 ## Version 1.3.0
 - added `BSMLAutomaticViewController`, an easier to use `ViewController` with hot reloading
 - added `clickable-image` component which behaves like `clickable-text` but for Images
