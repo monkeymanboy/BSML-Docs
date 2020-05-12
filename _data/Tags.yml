@@ -192,10 +192,39 @@
   - LayoutElement
   - PageButton
   - RectTransform
+- type: ScrollableContainerTag
+  aliases:
+  - scrollable-container
+  components:
+  - ContentSizeFitter
+  - HorizontalOrVerticalLayoutGroup
+  - LayoutGroup
+  - RectTransform
+  - BSMLScrollableContainer
 - type: ScrollableSettingsContainerTag
   aliases:
+  - settings-scroll-view
   - scrollable-settings-container
   components:
+  - BSMLScrollView
+  - ContentSizeFitter
+  - HorizontalOrVerticalLayoutGroup
+  - LayoutElement
+  - LayoutGroup
+  - RectTransform
+- type: ScrollIndicatorTag
+  aliases:
+  - vertical-scroll-indicator
+  - scroll-indicator
+  components:
+  - Image
+  - RectTransform
+  - BSMLScrollIndicator
+- type: ScrollViewTag
+  aliases:
+  - scroll-view
+  components:
+  - BSMLScrollView
   - ContentSizeFitter
   - HorizontalOrVerticalLayoutGroup
   - LayoutElement

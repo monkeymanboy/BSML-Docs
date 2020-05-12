@@ -6,6 +6,21 @@ layout: default
 If you're new to BSML take a look at [Getting Started](Getting Started/Getting Started)
 
 # Patch Notes
+## Version 1.3.2
+### Fonts
+- Can now load system fonts as TMPro fonts
+- Loads some fallback fonts on startup for base game font
+### Scrolly things
+- Added generic `scroll-view` (no more using `scrollable-settings-container` everywhere!)
+- Added `scrollable-container` which is a barebones scrollable container intended to be used with a tagged `scroll-indicator` and or buttons
+### Misc
+- Added `data` parameter similar to the one for `custom-list` to `list`
+- Added `characteristicSprites` to CustomCellInfo
+- Made default resource path for `BSMLAutomaticViewController` first check if it exists with no extension in case `DependentUpon` is being used on that embedded resource
+### Bug Fixes
+- Fixed `BSMLAutomaticViewController` parsing every time it's opened when not being hot reloaded
+- Fixed bug where gifs/apngs with a delay longer than 1 second wouldn't look right
+- Fixed private properties not working as a `UIValue`
 ## Version 1.3.1
 - change image's `color` to `image-color`
 ## Version 1.3.0

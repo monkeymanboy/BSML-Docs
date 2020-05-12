@@ -736,3 +736,34 @@
     - art
     - bg-artwork
     - bg-art
+- type: BSMLScrollIndicator
+  properties:
+  - name: handleColor
+    type: color string
+    description: Color of handle
+    aliases:
+    - handle-color
+  - name: handleImage
+    type: color string
+    description: Path to image to use as handle Sprite.
+    aliases:
+    - handle-image
+- type: BSMLScrollableContainer
+  properties:
+  - name: maskOverflow
+    type: bool
+    description: Whether or not to allow objects to extend past the container
+    aliases:
+    - mask-overflow
+  - name: alignBottom
+    type: bool
+    description: Whether or not scrollable goes from bottom to top or top to bottom
+    aliases:
+    - align-bottom
+- type: BSMLScrollView
+  properties:
+  - name: reserveButtonSpace
+    type: bool
+    description: Whether or not the content should go into the button area
+    aliases:
+    - reserve-button-space

@@ -11,7 +11,7 @@ The UIObject attribute can only be applied to fields. The type of the field must
 <text id='whatever'></text>
 ```
 ```csharp
-[UIComponent("whatever")]
+[UIObject("whatever")]
 private GameObject textObj;
 ```
 This example will initialize `textObj` with the text tag's `GameObject` component.
