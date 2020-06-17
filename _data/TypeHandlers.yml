@@ -226,12 +226,12 @@
     - child-expand-height
   - name: childControlWidth
     type: bool
-    description: Whether or not to control the width it's chidlren
+    description: Whether or not to control the width it's children
     aliases:
     - child-control-width
   - name: childControlHeight
     type: bool
-    description: Whether or not to control the height it's chidlren
+    description: Whether or not to control the height it's children
     aliases:
     - child-control-height
 - type: LayoutElement
