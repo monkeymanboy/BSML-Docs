@@ -11,6 +11,7 @@
   aliases:
   - big-button
   components:
+  - Selectable
   - Button
   - ButtonIconImage
   - LayoutElement
@@ -28,6 +29,7 @@
   aliases:
   - button
   components:
+  - Selectable
   - Button
   - ContentSizeFitter
   - Glowable
@@ -83,6 +85,7 @@
   - button-with-icon
   - icon-button
   components:
+  - Selectable
   - Button
   - ButtonIconImage
   - HorizontalOrVerticalLayoutGroup
@@ -130,6 +133,7 @@
   aliases:
   - modifier
   components:
+  - Selectable
   - Image
   - RectTransform
   - TextMeshProUGUI
@@ -185,6 +189,7 @@
   - page-button
   - pg-button
   components:
+  - Selectable
   - Button
   - ButtonIconImage
   - ContentSizeFitter
@@ -272,6 +277,7 @@
   components:
   - RectTransform
   - TextPageScrollView
+  - TextMeshProUGUI
 - type: TextSegmentedControlTag
   aliases:
   - text-segments
@@ -285,6 +291,7 @@
   - text
   - label
   components:
+  - FormattableText
   - RectTransform
   - TextMeshProUGUI
 - type: VerticalLayoutTag
@@ -301,6 +308,7 @@
   aliases:
   - bool-setting
   components:
+  - GenericInteractableSetting
   - LayoutElement
   - RectTransform
   - TextMeshProUGUI
@@ -310,6 +318,7 @@
   - checkbox-setting
   - checkbox
   components:
+  - Selectable
   - LayoutElement
   - RectTransform
   - TextMeshProUGUI
@@ -318,6 +327,7 @@
   aliases:
   - color-setting
   components:
+  - GenericInteractableSetting
   - LayoutElement
   - RectTransform
   - TextMeshProUGUI
@@ -326,6 +336,7 @@
   aliases:
   - dropdown-list-setting
   components:
+  - Selectable
   - Button
   - LayoutElement
   - RectTransform
@@ -336,6 +347,7 @@
   aliases:
   - increment-setting
   components:
+  - GenericInteractableSetting
   - LayoutElement
   - RectTransform
   - TextMeshProUGUI
@@ -345,6 +357,7 @@
   aliases:
   - list-setting
   components:
+  - GenericInteractableSetting
   - LayoutElement
   - RectTransform
   - TextMeshProUGUI
@@ -354,6 +367,7 @@
   aliases:
   - list-slider-setting
   components:
+  - GenericInteractableSetting
   - LayoutElement
   - RectTransform
   - TextMeshProUGUI
@@ -363,6 +377,7 @@
   aliases:
   - slider-setting
   components:
+  - GenericInteractableSetting
   - LayoutElement
   - RectTransform
   - TextMeshProUGUI
@@ -372,6 +387,7 @@
   aliases:
   - string-setting
   components:
+  - GenericInteractableSetting
   - LayoutElement
   - RectTransform
   - TextMeshProUGUI

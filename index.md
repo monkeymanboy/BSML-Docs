@@ -6,7 +6,21 @@ layout: default
 If you're new to BSML take a look at [Getting Started](Getting Started/Getting Started)
 
 # Patch Notes
+
+## Version 1.3.3
+
+### Formattable Text
+- The `text` tag now creates `FormattableText` where you can pass any type of object in the `data` property and have it be formatted either by a given `data-format` using any `data-formatter` or the object being `IFormattable`
+
+### Misc
+- Can now use refer to fields, properties, and methods directly without UIValue or UIAction. You can change how this is handled with the `HostOptions` attribute.
+- `interactable` moved to Selectable handler
+- Added `GenericInteractableSetting` for settings that have an interactable property
+- Settings can now make use of property binding with the new `bind-value` property
+- `text-page` can now use all text options
+
 ## Version 1.3.2
+
 ### Fonts
 - Can now load system fonts as TMPro fonts
 - Loads some fallback fonts on startup for base game font
@@ -38,6 +52,7 @@ If you're new to BSML take a look at [Getting Started](Getting Started/Getting S
 ## Version 1.2.0
 - updated for Beat Saber 1.8.0
 ## Version 1.1.5
+
 ### Color Components
 - added `color-setting` for easily adding color options to your settings
 - added `modal-color-picker` which is similar to `modal-keyboard` in usage

@@ -25,11 +25,6 @@
     aliases:
     - click-event
     - event-click
-  - name: interactable
-    type: bool
-    description: Whether or not the button is clickable
-    aliases:
-    - interactable
 - type: ClickableImage
   properties:
   - name: onClick
@@ -594,6 +589,11 @@
     description: How to display a certain setting option
     aliases:
     - formatter
+  - name: bindValue
+    type: bool
+    description: Whether or not to bind the UIValue given with the `value` property to update the value when NotifyPropertyChanged is called.
+    aliases:
+    - bind-value
 - type: IncrementSetting
   properties:
   - name: increment
@@ -767,3 +767,41 @@
     description: Whether or not the content should go into the button area
     aliases:
     - reserve-button-space
+- type: Selectable
+  properties:
+  - name: interactable
+    type: bool
+    description: Whether or not this is interactable
+    aliases:
+    - interactable
+- type: GenericInteractableSetting
+  properties:
+  - name: interactable
+    type: bool
+    description: Whether or not this setting is interactable
+    aliases:
+    - interactable
+- type: Interactable
+  properties:
+  - name: interactable
+    type: bool
+    description: Whether or not this setting is interactable
+    aliases:
+    - interactable
+- type: FormattableText
+  properties:
+  - name: data
+    type: object
+    description: The object that will be formatted
+    aliases:
+    - data
+  - name: dataFormat
+    type: string
+    description: String defining the format
+    aliases:
+    - data-format
+  - name: dataFormatter
+    type: UIValue(ICustomFormatter)
+    description: The formatter to use for the given object
+    aliases:
+    - data-formatter
