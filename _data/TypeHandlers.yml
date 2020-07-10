@@ -542,13 +542,6 @@
     description: Whether or not to make the text all uppercase
     aliases:
     - all-uppercase
-- type: TextPageScrollView
-  properties:
-  - name: text
-    type: string
-    description: Text on scrollview
-    aliases:
-    - text
 - type: DropDownListSetting
   properties:
   - name: options
