@@ -5,9 +5,9 @@
 - type: background string
   values:
   - round-rect-panel
-  - panel-bottom
   - panel-top
-  - round-rect-panel-shadow
+  - panel-fade-gradient
+  - panel-top-gradient
 - type: color string
   patterns:
   - ([#][a-fA-F0-9]*)

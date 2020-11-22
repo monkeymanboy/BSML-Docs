@@ -7,6 +7,21 @@ If you're new to BSML take a look at [Getting Started](Getting Started/Getting S
 
 # Patch Notes
 
+## Version 1.4.2
+- Removed localization option from BSML (this will be handled by a different mod)
+- `scroll-view` bug fixes
+- Fixed attributes not working on inherited properties
+
+## Version 1.4.1
+- Fixed some floating screen bugs
+- Added `vertical-icon-segments` tag
+
+## Version 1.4.0
+- Updated for version 1.12 of Beat Saber
+- Removed some tags (`bottom-button-panel`, `big-button`)
+- Added localization option to BSML settings
+- Added `primary-button` tag
+
 ## Version 1.3.5
 - Added `RelativePathToLayout` property to the `HotReload` attribute
 - Fixed false positive fpfc bug with floating screens

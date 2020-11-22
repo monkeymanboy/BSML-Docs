@@ -7,24 +7,18 @@
   - Backgroundable
   - ContentSizeFitter
   - RectTransform
-- type: BigButtonTag
+- type: ToggleSettingTag
   aliases:
-  - big-button
+  - toggle-setting
+  - bool-setting
+  - checkbox-setting
+  - checkbox
   components:
-  - Selectable
-  - Button
-  - ButtonIconImage
+  - GenericInteractableSetting
   - LayoutElement
   - RectTransform
-  - Strokable
   - TextMeshProUGUI
-- type: BottomButtonPanelTag
-  aliases:
-  - bottom-button-panel
-  components:
-  - HorizontalOrVerticalLayoutGroup
-  - LayoutGroup
-  - RectTransform
+  - GenericSetting
 - type: ButtonTag
   aliases:
   - button
@@ -32,12 +26,9 @@
   - Selectable
   - Button
   - ContentSizeFitter
-  - Glowable
-  - HorizontalOrVerticalLayoutGroup
   - LayoutElement
   - LayoutGroup
   - RectTransform
-  - Strokable
   - TextMeshProUGUI
 - type: ClickableImageTag
   aliases:
@@ -88,11 +79,10 @@
   - Selectable
   - Button
   - ButtonIconImage
-  - HorizontalOrVerticalLayoutGroup
+  - ContentSizeFitter
   - LayoutElement
   - LayoutGroup
   - RectTransform
-  - Strokable
 - type: IconSegmentedControlTag
   aliases:
   - icon-segments
@@ -113,8 +103,6 @@
   aliases:
   - modal-color-picker
   components:
-  - Backgroundable
-  - Image
   - ModalColorPicker
   - ModalView
   - RectTransform
@@ -122,10 +110,8 @@
   aliases:
   - modifier-container
   components:
-  - Backgroundable
   - ContentSizeFitter
   - HorizontalOrVerticalLayoutGroup
-  - Image
   - LayoutElement
   - LayoutGroup
   - RectTransform
@@ -133,11 +119,25 @@
   aliases:
   - modifier
   components:
+  - GenericInteractableSetting
   - Selectable
   - Image
+  - LayoutElement
   - RectTransform
   - TextMeshProUGUI
   - GenericSetting
+- type: PrimaryButtonTag
+  aliases:
+  - primary-button
+  - action-button
+  components:
+  - Selectable
+  - Button
+  - ContentSizeFitter
+  - LayoutElement
+  - LayoutGroup
+  - RectTransform
+  - TextMeshProUGUI
 - type: RawImageTag
   aliases:
   - raw-image
@@ -149,7 +149,6 @@
   aliases:
   - leaderboard
   components:
-  - Image
   - LeaderboardTableView
   - RectTransform
 - type: ListTag
@@ -171,8 +170,6 @@
   aliases:
   - modal-keyboard
   components:
-  - Backgroundable
-  - Image
   - ModalKeyboard
   - ModalView
   - RectTransform
@@ -180,8 +177,6 @@
   aliases:
   - modal
   components:
-  - Backgroundable
-  - Image
   - ModalView
   - RectTransform
 - type: PageButtonTag
@@ -193,7 +188,6 @@
   - Button
   - ButtonIconImage
   - ContentSizeFitter
-  - Glowable
   - LayoutElement
   - PageButton
   - RectTransform
@@ -210,9 +204,8 @@
   aliases:
   - settings-scroll-view
   - scrollable-settings-container
+  - settings-container
   components:
-  - BSMLScrollView
-  - ContentSizeFitter
   - HorizontalOrVerticalLayoutGroup
   - LayoutElement
   - LayoutGroup
@@ -229,17 +222,6 @@
   aliases:
   - scroll-view
   components:
-  - BSMLScrollView
-  - ContentSizeFitter
-  - HorizontalOrVerticalLayoutGroup
-  - LayoutElement
-  - LayoutGroup
-  - RectTransform
-- type: SettingsContainerTag
-  aliases:
-  - settings-container
-  components:
-  - ContentSizeFitter
   - HorizontalOrVerticalLayoutGroup
   - LayoutElement
   - LayoutGroup
@@ -276,8 +258,8 @@
   - text-page
   components:
   - RectTransform
-  - TextPageScrollView
   - TextMeshProUGUI
+  - TextPageScrollView
 - type: TextSegmentedControlTag
   aliases:
   - text-segments
@@ -294,6 +276,15 @@
   - FormattableText
   - RectTransform
   - TextMeshProUGUI
+- type: VerticalIconSegmentedControlTag
+  aliases:
+  - vertical-icon-segments
+  components:
+  - HorizontalOrVerticalLayoutGroup
+  - IconSegmentedControl
+  - Image
+  - LayoutGroup
+  - RectTransform
 - type: VerticalLayoutTag
   aliases:
   - vertical
@@ -304,25 +295,6 @@
   - LayoutElement
   - LayoutGroup
   - RectTransform
-- type: BoolSettingTag
-  aliases:
-  - bool-setting
-  components:
-  - GenericInteractableSetting
-  - LayoutElement
-  - RectTransform
-  - TextMeshProUGUI
-  - GenericSetting
-- type: CheckboxSettingTag
-  aliases:
-  - checkbox-setting
-  - checkbox
-  components:
-  - Selectable
-  - LayoutElement
-  - RectTransform
-  - TextMeshProUGUI
-  - GenericSetting
 - type: ColorSettingTag
   aliases:
   - color-setting
@@ -336,8 +308,6 @@
   aliases:
   - dropdown-list-setting
   components:
-  - Selectable
-  - Button
   - LayoutElement
   - RectTransform
   - TextMeshProUGUI
