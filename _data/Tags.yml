@@ -120,7 +120,6 @@
   - modifier
   components:
   - GenericInteractableSetting
-  - Selectable
   - Image
   - LayoutElement
   - RectTransform
