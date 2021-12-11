@@ -642,6 +642,11 @@
     description: Whether or not to use int or float
     aliases:
     - integer-only
+  - name: showButtons
+    type: bool
+    description: Whether or not to show increment/decrement buttons on either side of the slider
+    aliases:
+    - show-buttons
 - type: Strokable
   properties:
   - name: strokeColor
