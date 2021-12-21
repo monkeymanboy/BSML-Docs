@@ -173,6 +173,16 @@
     description: Whether or not to align the cells to the center
     aliases:
     - align-to-center
+  - name: stickScrolling
+    type: bool
+    description: Whether or not to allow this table to scroll using the controller joystick
+    aliases:
+    - stick-scrolling
+  - name: showScrollbar
+    type: bool
+    description: Whether or not to show a scroll bar with buttons to scroll this table
+    aliases:
+    - show-scrollbar
 - type: Glowable
   properties:
   - name: glowColor
