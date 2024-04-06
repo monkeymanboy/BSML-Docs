@@ -2,7 +2,7 @@
 title: Getting Started (old)
 layout: default
 has_children: true
-nav_order: 0
+nav_order: -1
 ---
 # Creating a BSMLResourceViewController
 A BSMLResourceViewController is simply a view controller that will load a BSML template from an embedded resource in your project, it's the simplest and most common way to make use of the library.
