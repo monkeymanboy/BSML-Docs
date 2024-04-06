@@ -6,7 +6,7 @@
     <text text="Grid" align="Center" font-size="8"/>
   </horizontal>
   <horizontal horizontal-fit="PreferredSize">
-    <grid cell-size-y="9" cell-size-x="36" spacing-x="2" spacing-y="2" align="Center">
+    <grid cell-size="36 9" spacing="2 2" align="Center">
       <macro.for-each items="buttons">
         <button id="menu-button" pref-width="36" pref-height="9" text="~text" on-click="button-click"></button>
       </macro.for-each>
