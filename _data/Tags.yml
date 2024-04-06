@@ -7,34 +7,37 @@
   - Backgroundable
   - ContentSizeFitter
   - RectTransform
-- type: ToggleSettingTag
-  aliases:
-  - toggle-setting
-  - bool-setting
-  - checkbox-setting
-  - checkbox
-  components:
-  - GenericInteractableSetting
-  - LayoutElement
-  - RectTransform
-  - TextMeshProUGUI
-  - GenericSetting
 - type: ButtonTag
   aliases:
   - button
   components:
-  - Selectable
   - Button
+  - ContentSizeFitter
+  - Graphic
+  - LayoutElement
+  - LayoutGroup
+  - LocalizedTextMeshProUGUI
+  - RectTransform
+  - Selectable
+  - TextMeshProUGUI
+- type: ButtonWithIconTag
+  aliases:
+  - button-with-icon
+  - icon-button
+  components:
+  - Button
+  - ButtonIconImage
   - ContentSizeFitter
   - LayoutElement
   - LayoutGroup
   - RectTransform
-  - TextMeshProUGUI
+  - Selectable
 - type: ClickableImageTag
   aliases:
   - clickable-image
   components:
   - ClickableImage
+  - Graphic
   - Image
   - LayoutElement
   - RectTransform
@@ -43,6 +46,19 @@
   - clickable-text
   components:
   - ClickableText
+  - Graphic
+  - LocalizedTextMeshProUGUI
+  - RectTransform
+  - TextMeshProUGUI
+- type: ColorSettingTag
+  aliases:
+  - color-setting
+  components:
+  - GenericInteractableSetting
+  - GenericSetting
+  - Graphic
+  - LayoutElement
+  - LocalizedTextMeshProUGUI
   - RectTransform
   - TextMeshProUGUI
 - type: CustomListTag
@@ -52,6 +68,18 @@
   - CustomCellListTableData
   - LayoutElement
   - RectTransform
+- type: DropdownListSettingTag
+  aliases:
+  - dropdown-list-setting
+  components:
+  - DropDownListSetting
+  - GenericInteractableSetting
+  - GenericSetting
+  - Graphic
+  - LayoutElement
+  - LocalizedTextMeshProUGUI
+  - RectTransform
+  - TextMeshProUGUI
 - type: GridLayoutTag
   aliases:
   - grid
@@ -71,18 +99,6 @@
   - LayoutElement
   - LayoutGroup
   - RectTransform
-- type: ButtonWithIconTag
-  aliases:
-  - button-with-icon
-  - icon-button
-  components:
-  - Selectable
-  - Button
-  - ButtonIconImage
-  - ContentSizeFitter
-  - LayoutElement
-  - LayoutGroup
-  - RectTransform
 - type: IconSegmentedControlTag
   aliases:
   - icon-segments
@@ -96,6 +112,66 @@
   - image
   - img
   components:
+  - Graphic
+  - Image
+  - LayoutElement
+  - RectTransform
+- type: IncrementSettingTag
+  aliases:
+  - increment-setting
+  components:
+  - GenericInteractableSetting
+  - GenericSetting
+  - Graphic
+  - IncrementSetting
+  - LayoutElement
+  - LocalizedTextMeshProUGUI
+  - RectTransform
+  - TextMeshProUGUI
+- type: LeaderboardTag
+  aliases:
+  - leaderboard
+  components:
+  - Graphic
+  - LeaderboardTableView
+  - RectTransform
+- type: ListSettingTag
+  aliases:
+  - list-setting
+  components:
+  - GenericInteractableSetting
+  - GenericSetting
+  - Graphic
+  - LayoutElement
+  - ListSetting
+  - LocalizedTextMeshProUGUI
+  - RectTransform
+  - TextMeshProUGUI
+- type: ListSliderSettingTag
+  aliases:
+  - list-slider-setting
+  components:
+  - GenericInteractableSetting
+  - GenericSetting
+  - Graphic
+  - LayoutElement
+  - ListSliderSetting
+  - LocalizedTextMeshProUGUI
+  - RectTransform
+  - TextMeshProUGUI
+- type: ListTag
+  aliases:
+  - list
+  components:
+  - CustomListTableData
+  - LayoutElement
+  - RectTransform
+- type: LoadingIndicatorTag
+  aliases:
+  - loading
+  - loading-indicator
+  components:
+  - Graphic
   - Image
   - LayoutElement
   - RectTransform
@@ -103,7 +179,23 @@
   aliases:
   - modal-color-picker
   components:
+  - Graphic
   - ModalColorPicker
+  - ModalView
+  - RectTransform
+- type: ModalKeyboardTag
+  aliases:
+  - modal-keyboard
+  components:
+  - Graphic
+  - ModalKeyboard
+  - ModalView
+  - RectTransform
+- type: ModalTag
+  aliases:
+  - modal
+  components:
+  - Graphic
   - ModalView
   - RectTransform
 - type: ModifierContainerTag
@@ -120,85 +212,58 @@
   - modifier
   components:
   - GenericInteractableSetting
-  - Image
-  - LayoutElement
-  - RectTransform
-  - TextMeshProUGUI
   - GenericSetting
-- type: PrimaryButtonTag
-  aliases:
-  - primary-button
-  - action-button
-  components:
-  - Selectable
-  - Button
-  - ContentSizeFitter
-  - LayoutElement
-  - LayoutGroup
-  - RectTransform
-  - TextMeshProUGUI
-- type: RawImageTag
-  aliases:
-  - raw-image
-  components:
-  - RawImage
-  - LayoutElement
-  - RectTransform
-- type: LeaderboardTag
-  aliases:
-  - leaderboard
-  components:
-  - LeaderboardTableView
-  - RectTransform
-- type: ListTag
-  aliases:
-  - list
-  components:
-  - CustomListTableData
-  - LayoutElement
-  - RectTransform
-- type: LoadingIndicatorTag
-  aliases:
-  - loading
-  - loading-indicator
-  components:
+  - Graphic
   - Image
   - LayoutElement
+  - LocalizedTextMeshProUGUI
   - RectTransform
-- type: ModalKeyboardTag
-  aliases:
-  - modal-keyboard
-  components:
-  - ModalKeyboard
-  - ModalView
-  - RectTransform
-- type: ModalTag
-  aliases:
-  - modal
-  components:
-  - ModalView
-  - RectTransform
+  - Selectable
+  - TextMeshProUGUI
 - type: PageButtonTag
   aliases:
   - page-button
   - pg-button
   components:
-  - Selectable
   - Button
   - ButtonIconImage
   - ContentSizeFitter
+  - Graphic
   - LayoutElement
   - PageButton
+  - RectTransform
+  - Selectable
+- type: PrimaryButtonTag
+  aliases:
+  - primary-button
+  - action-button
+  components:
+  - Button
+  - ContentSizeFitter
+  - Graphic
+  - LayoutElement
+  - LayoutGroup
+  - LocalizedTextMeshProUGUI
+  - RectTransform
+  - Selectable
+  - TextMeshProUGUI
+- type: RawImageTag
+  aliases:
+  - raw-image
+  components:
+  - Graphic
+  - LayoutElement
+  - RawImage
   - RectTransform
 - type: ScrollableContainerTag
   aliases:
   - scrollable-container
   components:
+  - BSMLScrollableContainer
   - ContentSizeFitter
   - HorizontalOrVerticalLayoutGroup
   - LayoutGroup
   - RectTransform
-  - BSMLScrollableContainer
 - type: ScrollableSettingsContainerTag
   aliases:
   - settings-scroll-view
@@ -214,9 +279,10 @@
   - vertical-scroll-indicator
   - scroll-indicator
   components:
+  - BSMLScrollIndicator
+  - Graphic
   - Image
   - RectTransform
-  - BSMLScrollIndicator
 - type: ScrollViewTag
   aliases:
   - scroll-view
@@ -225,6 +291,18 @@
   - LayoutElement
   - LayoutGroup
   - RectTransform
+- type: SliderSettingTag
+  aliases:
+  - slider-setting
+  components:
+  - GenericInteractableSetting
+  - GenericSetting
+  - Graphic
+  - LayoutElement
+  - LocalizedTextMeshProUGUI
+  - RectTransform
+  - SliderSetting
+  - TextMeshProUGUI
 - type: StackLayoutTag
   aliases:
   - stack
@@ -234,6 +312,26 @@
   - LayoutElement
   - LayoutGroup
   - RectTransform
+- type: StringSettingTag
+  aliases:
+  - string-setting
+  components:
+  - GenericInteractableSetting
+  - GenericSetting
+  - Graphic
+  - LayoutElement
+  - LocalizedTextMeshProUGUI
+  - RectTransform
+  - TextMeshProUGUI
+- type: SubmenuTag
+  aliases:
+  - settings-submenu
+  components:
+  - ClickableText
+  - Graphic
+  - LocalizedTextMeshProUGUI
+  - RectTransform
+  - TextMeshProUGUI
 - type: TabSelectorTag
   aliases:
   - tab-select
@@ -256,6 +354,8 @@
   aliases:
   - text-page
   components:
+  - Graphic
+  - LocalizedTextMeshProUGUI
   - RectTransform
   - TextMeshProUGUI
   - TextPageScrollView
@@ -273,12 +373,29 @@
   - label
   components:
   - FormattableText
+  - Graphic
+  - LocalizedTextMeshProUGUI
+  - RectTransform
+  - TextMeshProUGUI
+- type: ToggleSettingTag
+  aliases:
+  - toggle-setting
+  - bool-setting
+  - checkbox-setting
+  - checkbox
+  components:
+  - GenericInteractableSetting
+  - GenericSetting
+  - Graphic
+  - LayoutElement
+  - LocalizedTextMeshProUGUI
   - RectTransform
   - TextMeshProUGUI
 - type: VerticalIconSegmentedControlTag
   aliases:
   - vertical-icon-segments
   components:
+  - Graphic
   - HorizontalOrVerticalLayoutGroup
   - IconSegmentedControl
   - Image
@@ -294,77 +411,3 @@
   - LayoutElement
   - LayoutGroup
   - RectTransform
-- type: ColorSettingTag
-  aliases:
-  - color-setting
-  components:
-  - GenericInteractableSetting
-  - LayoutElement
-  - RectTransform
-  - TextMeshProUGUI
-  - GenericSetting
-- type: DropdownListSettingTag
-  aliases:
-  - dropdown-list-setting
-  components:
-  - LayoutElement
-  - RectTransform
-  - TextMeshProUGUI
-  - DropDownListSetting
-  - GenericSetting
-- type: IncrementSettingTag
-  aliases:
-  - increment-setting
-  components:
-  - GenericInteractableSetting
-  - LayoutElement
-  - RectTransform
-  - TextMeshProUGUI
-  - GenericSetting
-  - IncrementSetting
-- type: ListSettingTag
-  aliases:
-  - list-setting
-  components:
-  - GenericInteractableSetting
-  - LayoutElement
-  - RectTransform
-  - TextMeshProUGUI
-  - GenericSetting
-  - ListSetting
-- type: ListSliderSettingTag
-  aliases:
-  - list-slider-setting
-  components:
-  - GenericInteractableSetting
-  - LayoutElement
-  - RectTransform
-  - TextMeshProUGUI
-  - GenericSetting
-  - ListSliderSetting
-- type: SliderSettingTag
-  aliases:
-  - slider-setting
-  components:
-  - GenericInteractableSetting
-  - LayoutElement
-  - RectTransform
-  - TextMeshProUGUI
-  - GenericSetting
-  - SliderSetting
-- type: StringSettingTag
-  aliases:
-  - string-setting
-  components:
-  - GenericInteractableSetting
-  - LayoutElement
-  - RectTransform
-  - TextMeshProUGUI
-  - GenericSetting
-- type: SubmenuTag
-  aliases:
-  - settings-submenu
-  components:
-  - ClickableText
-  - RectTransform
-  - TextMeshProUGUI

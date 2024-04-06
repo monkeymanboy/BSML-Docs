@@ -2,7 +2,7 @@ page_gen-dirs: true # uncomment, if you prefer to generate named folders
 theme: "just-the-docs"
 color_scheme: dark
 title: BSML Docs
-description: Documentation for Beat Saber library BeatSaberMarkupLanguage
+description: Documentation for Beat Saber library BeatSaberMarkupLanguage.
 logo: "/assets/images/logo.png"
 search_enabled: true
 heading_anchors: true

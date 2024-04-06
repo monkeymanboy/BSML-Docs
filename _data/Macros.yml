@@ -1,68 +1,68 @@
 - type: AsHostMacro
-  description: Parses child nodes with a different host object
+  description: Parses child nodes with a different host object.
   aliases:
   - macro.as-host
   properties:
   - name: host
     type: UIValue
-    description: Host object
+    description: Host object.
     aliases:
     - host
 - type: DefineMacro
-  description: Defines a UIValue within a BSML template
+  description: Defines a UIValue within a BSML template.
   aliases:
   - macro.define
   properties:
   - name: name
     type: string
-    description: ID of UIValue
+    description: ID of UIValue.
     aliases:
     - name
     - id
   - name: value
     type: string
-    description: Value to store in UIValue
+    description: Value to store in UIValue.
     aliases:
     - value
 - type: ForEachMacro
-  description: Parses child nodes for every host object in a list
+  description: Parses child nodes for every host object in a list.
   aliases:
   - macro.for-each
   properties:
   - name: hosts
     type: UIValue(List<object>)
-    description: Host object list
+    description: Host object list.
     aliases:
     - hosts
     - items
   - name: passTags
     type: bool
-    description: Whether or not to pass back tagged objects to main BSMLParserParams
+    description: Whether or not to pass back tagged objects to main BSMLParserParams.
     aliases:
     - pass-back-tags
 - type: IfMacro
-  description: Only parses child nodes if a value is true
+  description: Only parses child nodes if a value is true.
   aliases:
   - macro.if
   properties:
   - name: value
     type: UIValue(bool)
-    description: ID of bool UIValue, can be prefixed with ! operator to invert value
+    description: ID of bool UIValue, can be prefixed with ! operator to invert value.
     aliases:
     - bool
     - value
 - type: ReparentMacro
-  description: Reparents an existing Transform or Transforms into the template hierarchy
+  description: Reparents an existing Transform or Transforms into the template hierarchy.
   aliases:
   - macro.reparent
   properties:
   - name: transform
     type: UIValue(Transform)
-    description: ID of UIValue that has the desired Transform
+    description: ID of UIValue that has the desired Transform.
     aliases:
     - transform
   - name: transforms
     type: UIValue(List<Transform>)
-    description: ID of UIValue that has a list of Transforms
+    description: ID of UIValue that has a list of Transforms.
     aliases:
     - transforms

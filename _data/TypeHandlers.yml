@@ -2,743 +2,76 @@
   properties:
   - name: background
     type: background string
-    description: Sets the background of this backgroundable
+    description: The background of this backgroundable.
     aliases:
-    - background
     - bg
+    - background
+  - name: backgroundAlpha
+    type: float
+    description: The opacity of the background.
+    aliases:
+    - bg-alpha
+    - background-alpha
   - name: backgroundColor
     type: color string
-    description: Sets the color of this background
+    description: The color of this background.
     aliases:
-    - background-color
     - bg-color
+    - background-color
+  - name: backgroundColor0
+    type: color string
+    description: The first color of the gradient.
+    aliases:
+    - bg-color0
+    - background-color0
+  - name: backgroundColor1
+    type: color string
+    description: The second color of the gradient.
+    aliases:
+    - bg-color1
+    - background-color1
+- type: BSMLScrollableContainer
+  properties:
+  - name: alignBottom
+    type: bool
+    description: Whether or not scrollable goes from bottom to top or top to bottom.
+    aliases:
+    - align-bottom
+  - name: maskOverflow
+    type: bool
+    description: Whether or not to allow objects to extend past the container.
+    aliases:
+    - mask-overflow
+  - name: scrollToBottomOnUpdate
+    type: bool
+    description: Whether or not to scroll to the bottom of the list when data is updated rather than the top.
+    aliases:
+    - scroll-to-bottom-on-update
+- type: BSMLScrollIndicator
+  properties:
+  - name: handleColor
+    type: color string
+    description: Color of handle.
+    aliases:
+    - handle-color
+  - name: handleImage
+    type: color string
+    description: Path to image to use as handle Sprite.
+    aliases:
+    - handle-image
 - type: Button
   properties:
-  - name: onClick
-    type: UIAction
-    description: UIAction that will fire on click
-    aliases:
-    - on-click
   - name: clickEvent
     type: event
-    description: Event that will fire on click
+    description: Event that will fire on click.
     aliases:
     - click-event
     - event-click
-- type: ClickableImage
-  properties:
   - name: onClick
     type: UIAction
-    description: UIAction that will fire on click
+    description: UIAction that will fire on click.
     aliases:
     - on-click
-  - name: clickEvent
-    type: event
-    description: Event that will fire on click
-    aliases:
-    - click-event
-    - event-click
-  - name: highlightColor
-    type: color string
-    description: Color when this image has a pointer over it
-    aliases:
-    - highlight-color
-  - name: defaultColor
-    type: color string
-    description: Default color of image
-    aliases:
-    - default-color
-- type: ClickableText
-  properties:
-  - name: onClick
-    type: UIAction
-    description: UIAction that will fire on click
-    aliases:
-    - on-click
-  - name: clickEvent
-    type: event
-    description: Event that will fire on click
-    aliases:
-    - click-event
-    - event-click
-  - name: highlightColor
-    type: color string
-    description: Color when this text has a pointer over it
-    aliases:
-    - highlight-color
-  - name: defaultColor
-    type: color string
-    description: Default color of text
-    aliases:
-    - default-color
-- type: ContentSizeFitter
-  properties:
-  - name: horizontalFit
-    type: FitMode
-    description: How the width is controlled
-    aliases:
-    - horizontal-fit
-  - name: verticalFit
-    type: FitMode
-    description: How the height is controlled
-    aliases:
-    - vertical-fit
-- type: CustomCellListTableData
-  properties:
-  - name: selectCell
-    type: UIAction<TableView, object>
-    description: UIAction to run when a cell is clicked object can be the type of the cell host
-    aliases:
-    - select-cell
-  - name: visibleCells
-    type: float
-    description: How many cells long/wide to make the list
-    aliases:
-    - visible-cells
-  - name: cellSize
-    type: float
-    description: width/height of a cell
-    aliases:
-    - cell-size
-  - name: listWidth
-    type: float
-    description: list width, only relevant for vertical lists
-    aliases:
-    - list-width
-  - name: listHeight
-    type: float
-    description: list height, only relevant for horizontal lists
-    aliases:
-    - list-height
-  - name: listDirection
-    type: TableType
-    description: Whether or not the list is vertical or horizontal
-    aliases:
-    - list-direction
-  - name: data
-    type: UIValue(List<object>)
-    description: The contents of the list
-    aliases:
-    - contents
-    - data
-  - name: cellClickable
-    type: bool
-    description: Whether or not cells can be clicked or not
-    aliases:
-    - clickable-cells
-  - name: stickScrolling
-    type: bool
-    description: Whether or not to allow this table to scroll using the controller joystick
-    aliases:
-    - stick-scrolling
-  - name: showScrollbar
-    type: bool
-    description: Whether or not to show a scroll bar with buttons to scroll this table
-    aliases:
-    - show-scrollbar
-- type: CustomListTableData
-  properties:
-  - name: selectCell
-    type: UIAction<TableView, int>
-    description: UIAction to run when a cell is clicked, int is index of cell
-    aliases:
-    - select-cell
-  - name: visibleCells
-    type: float
-    description: How many cells long/wide to make the list
-    aliases:
-    - visible-cells
-  - name: cellSize
-    type: float
-    description: width/height of a cell
-    aliases:
-    - cell-size
-  - name: listWidth
-    type: float
-    description: list width, only relevant for vertical lists
-    aliases:
-    - list-width
-  - name: listHeight
-    type: float
-    description: list height, only relevant for horizontal lists
-    aliases:
-    - list-height
-  - name: listDirection
-    type: TableType
-    description: Whether or not the list is vertical or horizontal
-    aliases:
-    - list-direction
-  - name: expandCell
-    type: bool
-    description: Whether or not to expand the cell to allow for longer text (only relevant for List style)
-    aliases:
-    - expand-cell
-  - name: listStyle
-    type: ListStyle
-    description: The style of the list cells
-    aliases:
-    - list-style
-  - name: alignCenter
-    type: bool
-    description: Whether or not to align the cells to the center
-    aliases:
-    - align-to-center
-  - name: stickScrolling
-    type: bool
-    description: Whether or not to allow this table to scroll using the controller joystick
-    aliases:
-    - stick-scrolling
-  - name: showScrollbar
-    type: bool
-    description: Whether or not to show a scroll bar with buttons to scroll this table
-    aliases:
-    - show-scrollbar
-- type: Glowable
-  properties:
-  - name: glowColor
-    type: color string
-    description: The color of the glow ("none" for no glow)
-    aliases:
-    - glow-color
-- type: GridLayoutGroup
-  properties:
-  - name: cellSizeX
-    type: float
-    description: Width of each cell in the grid
-    aliases:
-    - cell-size-x
-  - name: cellSizeY
-    type: float
-    description: Height of each cell in the grid
-    aliases:
-    - cell-size-y
-  - name: spacingX
-    type: float
-    description: Horizontal space between cells
-    aliases:
-    - spacing-x
-  - name: spacingY
-    type: float
-    description: Vertical space between cells
-    aliases:
-    - spacing-y
-- type: HorizontalOrVerticalLayoutGroup
-  properties:
-  - name: spacing
-    type: float
-    description: Space between elements
-    aliases:
-    - spacing
-  - name: childForceExpandWidth
-    type: bool
-    description: Whether or not to force the children to expand to fill additional available horizontal space.
-    aliases:
-    - child-expand-width
-  - name: childForceExpandHeight
-    type: bool
-    description: Whether or not to force the children to expand to fill additional available vertical space.
-    aliases:
-    - child-expand-height
-  - name: childControlWidth
-    type: bool
-    description: Whether or not to control the width it's children
-    aliases:
-    - child-control-width
-  - name: childControlHeight
-    type: bool
-    description: Whether or not to control the height it's children
-    aliases:
-    - child-control-height
-- type: LayoutElement
-  properties:
-  - name: ignoreLayout
-    type: bool
-    description: Whether or not to use layout element.
-    aliases:
-    - ignore-layout
-  - name: preferredWidth
-    type: float
-    description: The preferred width this layout element should have before additional available width is allocated.
-    aliases:
-    - preferred-width
-    - pref-width
-  - name: preferredHeight
-    type: float
-    description: The preferred height this layout element should have before additional available height is allocated.
-    aliases:
-    - preferred-height
-    - pref-height
-  - name: minHeight
-    type: float
-    description: The minimum height this layout element should have.
-    aliases:
-    - min-height
-  - name: minWidth
-    type: float
-    description: The minimum width this layout element should have.
-    aliases:
-    - min-width
-- type: LayoutGroup
-  properties:
-  - name: padTop
-    type: int
-    description: Top padding
-    aliases:
-    - pad-top
-  - name: padBottom
-    type: int
-    description: Bottom padding
-    aliases:
-    - pad-bottom
-  - name: padLeft
-    type: int
-    description: Left padding
-    aliases:
-    - pad-left
-  - name: padRight
-    type: int
-    description: Right padding
-    aliases:
-    - pad-right
-  - name: pad
-    type: int
-    description: Padding for all directions
-    aliases:
-    - pad
-  - name: childAlign
-    type: TextAnchor
-    description: The alignment to use for the child layout elements in the layout group.
-    aliases:
-    - child-align
-- type: LeaderboardTableView
-  properties:
-  - name: cellSize
-    type: float
-    description: Height of an entry
-    aliases:
-    - cell-size
-- type: ModalColorPicker
-  properties:
-  - name: value
-    type: UIValue(Color)
-    description: Will get from this value on open and set this value on completion
-    aliases:
-    - value
-  - name: onCancel
-    type: UIAction
-    description: Will call this UIAction when cancel is pressed
-    aliases:
-    - on-cancel
-  - name: onDone
-    type: UIAction<Color>
-    description: Will call this UIAction when done is pressed with the current Color
-    aliases:
-    - on-done
-  - name: onChange
-    type: UIAction<Color>
-    description: Will call this UIAction when the color changes before done is pressed
-    aliases:
-    - color-change
-- type: ModalKeyboard
-  properties:
-  - name: value
-    type: UIValue(string)
-    description: Will get from this value on open and set this value on enter
-    aliases:
-    - value
-  - name: onEnter
-    type: UIAction<string>
-    description: Will call this UIAction on enter with the text entered
-    aliases:
-    - on-enter
-  - name: clearOnOpen
-    type: bool
-    description: Whether or not to clear the keyboard upon opening
-    aliases:
-    - clear-on-open
-- type: ModalView
-  properties:
-  - name: showEvent
-    type: event
-    description: When this event is fired the modal will appear
-    aliases:
-    - show-event
-  - name: hideEvent
-    type: event
-    description: When this event is fired the modal will close
-    aliases:
-    - hide-event
-  - name: clickOffCloses
-    type: bool
-    description: Whether or not clicking outside the modal closes it
-    aliases:
-    - click-off-closes
-    - clickerino-offerino-closerino
-  - name: moveToCenter
-    type: bool
-    description: Whether or not to center the modal on it's current screen
-    aliases:
-    - move-to-center
-- type: PageButton
-  properties:
-  - name: direction
-    type: PageButtonDirection
-    description: Direction of the page button
-    aliases:
-    - dir
-    - direction
-- type: RectTransform
-  properties:
-  - name: anchorMinX
-    type: float
-    description: The normalized x position in the parent RectTransform that the lower left corner is anchored to.
-    aliases:
-    - anchor-min-x
-  - name: anchorMinY
-    type: float
-    description: The normalized y position in the parent RectTransform that the lower left corner is anchored to.
-    aliases:
-    - anchor-min-y
-  - name: anchorMaxX
-    type: float
-    description: The normalized x position in the parent RectTransform that the upper right corner is anchored to.
-    aliases:
-    - anchor-max-x
-  - name: anchorMaxY
-    type: float
-    description: The normalized y position in the parent RectTransform that the upper right corner is anchored to.
-    aliases:
-    - anchor-max-y
-  - name: anchorPosX
-    type: float
-    description: The x position of the pivot of this RectTransform relative to the anchor reference point.
-    aliases:
-    - anchor-pos-x
-  - name: anchorPosY
-    type: float
-    description: The y position of the pivot of this RectTransform relative to the anchor reference point.
-    aliases:
-    - anchor-pos-y
-  - name: sizeDeltaX
-    type: float
-    description: The width of this RectTransform relative to the distances between the anchors.
-    aliases:
-    - size-delta-x
-  - name: sizeDeltaY
-    type: float
-    description: The height of this RectTransform relative to the distances between the anchors.
-    aliases:
-    - size-delta-y
-  - name: pivotX
-    type: float
-    description: Normalized x position to rotate around
-    aliases:
-    - pivot-x
-  - name: pivotY
-    type: float
-    description: Normalized y position to rotate around
-    aliases:
-    - pivot-y
-  - name: hoverHint
-    type: string
-    description: Text that will appear when a pointer hovers over
-    aliases:
-    - hover-hint
-  - name: active
-    type: bool
-    description: Whether or not the GameObject this RectTransform belongs to is active
-    aliases:
-    - active
-- type: Tab
-  properties:
-  - name: tabName
-    type: string
-    description: Name of the tab
-    aliases:
-    - tab-name
-- type: TabSelector
-  properties:
-  - name: tabTag
-    type: string
-    description: Tag to use to search for tabs
-    aliases:
-    - tab-tag
-  - name: pageCount
-    type: int
-    description: Max amount of items to display, can bind buttons with tags to change page
-    aliases:
-    - page-count
-  - name: leftButtonTag
-    type: string
-    description: Tag to use to find left button
-    aliases:
-    - left-button-tag
-  - name: rightButtonTag
-    type: string
-    description: Tag to use to find right button
-    aliases:
-    - right-button-tag
-- type: TextMeshProUGUI
-  properties:
-  - name: text
-    type: string
-    description: Text to display
-    aliases:
-    - text
-  - name: fontSize
-    type: float
-    description: Size of font
-    aliases:
-    - font-size
-  - name: color
-    type: color string
-    description: Color of font
-    aliases:
-    - font-color
-    - color
-  - name: faceColor
-    type: color string
-    description: Face color of font
-    aliases:
-    - face-color
-  - name: outlineColor
-    type: color string
-    description: Outline color of font
-    aliases:
-    - outline-color
-  - name: outlineWidth
-    type: float
-    description: Width of font outline
-    aliases:
-    - outline-width
-  - name: richText
-    type: bool
-    description: Whether or not to enable [rich text](http://digitalnativestudios.com/textmeshpro/docs/rich-text/)
-    aliases:
-    - rich-text
-  - name: alignment
-    type: TextAlignmentOptions
-    description: How to align the text
-    aliases:
-    - font-align
-    - align
-  - name: overflowMode
-    type: TextOverflowModes
-    description: How to handle text overflow
-    aliases:
-    - overflow-mode
-  - name: wordWrapping
-    type: bool
-    description: Whether or not to wrap text
-    aliases:
-    - word-wrapping
-  - name: bold
-    type: bool
-    description: Whether or not text is bold
-    aliases:
-    - bold
-  - name: italics
-    type: bool
-    description: Whether or not to italicize text
-    aliases:
-    - italics
-  - name: underlined
-    type: bool
-    description: Whether or not to underline text
-    aliases:
-    - underlined
-  - name: strikethrough
-    type: bool
-    description: Whether or not to strikethrough text
-    aliases:
-    - strikethrough
-  - name: allUppercase
-    type: bool
-    description: Whether or not to make the text all uppercase
-    aliases:
-    - all-uppercase
-- type: DropDownListSetting
-  properties:
-  - name: options
-    type: UIValue(List<object>)
-    description: Dropdown choices
-    aliases:
-    - options
-    - choices
-- type: GenericSetting
-  properties:
-  - name: onChange
-    type: UIAction<type>
-    description: UIAction to call when value changes
-    aliases:
-    - on-change
-  - name: value
-    type: UIValue(type)
-    description: UIValue of setting type to get from and set to
-    aliases:
-    - value
-  - name: setEvent
-    type: event
-    description: When this event is raised `value` will be set to the current setting's value
-    aliases:
-    - set-event
-  - name: getEvent
-    type: event
-    description: When this event is raised the current setting's value will be set to the value of `value`
-    aliases:
-    - get-event
-  - name: applyOnChange
-    type: bool
-    description: Whether or not to immediatly set `value` when setting changes.
-    aliases:
-    - apply-on-change
-  - name: formatter
-    type: UIAction<type>;string
-    description: How to display a certain setting option
-    aliases:
-    - formatter
-  - name: bindValue
-    type: bool
-    description: Whether or not to bind the UIValue given with the `value` property to update the value when NotifyPropertyChanged is called.
-    aliases:
-    - bind-value
-- type: IncrementSetting
-  properties:
-  - name: increment
-    type: int/float
-    description: How much to increment/decrement setting on button click
-    aliases:
-    - increment
-  - name: minValue
-    type: int/float
-    description: Minimum possible value for setting
-    aliases:
-    - min
-  - name: maxValue
-    type: int/float
-    description: Maximum possible value for setting
-    aliases:
-    - max
-  - name: isInt
-    type: bool
-    description: Whether or not to use int or float
-    aliases:
-    - integer-only
-- type: ListSliderSetting
-  properties:
-  - name: options
-    type: UIValue(List<object>)
-    description: Dropdown choices
-    aliases:
-    - options
-    - choices
-- type: ListSetting
-  properties:
-  - name: options
-    type: UIValue(List<object>)
-    description: Dropdown choices
-    aliases:
-    - options
-    - choices
-- type: SliderSetting
-  properties:
-  - name: increment
-    type: int/float
-    description: How much to increment/decrement setting on button click
-    aliases:
-    - increment
-  - name: minValue
-    type: int/float
-    description: Minimum possible value for setting
-    aliases:
-    - min
-  - name: maxValue
-    type: int/float
-    description: Maximum possible value for setting
-    aliases:
-    - max
-  - name: isInt
-    type: bool
-    description: Whether or not to use int or float
-    aliases:
-    - integer-only
-  - name: showButtons
-    type: bool
-    description: Whether or not to show increment/decrement buttons on either side of the slider
-    aliases:
-    - show-buttons
-- type: Strokable
-  properties:
-  - name: strokeColor
-    type: color string
-    description: Color of the stroke
-    aliases:
-    - stroke-color
-  - name: strokeType
-    type: StrokeType
-    description: Type of stroke
-    aliases:
-    - stroke-type
-- type: Image
-  properties:
-  - name: image
-    type: resource path
-    description: Path to image to use as Sprite. You can also prefix this with a \# to search for a Sprite from the base game.
-    aliases:
-    - source
-    - src
-  - name: preserveAspect
-    type: bool
-    description: Whether or not to preserve the aspect ratio of the image
-    aliases:
-    - preserve-aspect
-  - name: imageColor
-    type: color string
-    description: Color of this image
-    aliases:
-    - image-color
-    - img-color
-- type: RawImage
-  properties:
-  - name: image
-    type: resource path
-    description: Path to image to use as Texture. You can also prefix this with a \# to search for a Texture from the base game.
-    aliases:
-    - source
-    - src
-- type: TextSegmentedControl
-  properties:
-  - name: selectCell
-    type: UIAction<SegmentedControl, int>
-    description: Invoked when a cell is selected, parameters give you the SegmentedControl component and index of the selected cell.
-    aliases:
-    - select-cell
-  - name: data
-    type: List<object>
-    description: List of cells, uses ToString of object for text value.
-    aliases:
-    - contents
-    - data
-- type: IconSegmentedControl
-  properties:
-  - name: selectCell
-    type: UIAction<SegmentedControl, int>
-    description: Invoked when a cell is selected, parameters give you the SegmentedControl component and index of the selected cell.
-    aliases:
-    - select-cell
-  - name: data
-    type: List<IconSegmentedControl.DataItem>
-    description: List of cells.
-    aliases:
-    - contents
-    - data
-- type: ButtonIconImage
-  properties:
-  - name: icon
-    type: resource path
-    description: Path to image to use as icon Sprite.
-    aliases:
-    - icon
 - type: ButtonArtworkImage
   properties:
   - name: artwork
@@ -749,72 +82,839 @@
     - art
     - bg-artwork
     - bg-art
-- type: BSMLScrollIndicator
+- type: ButtonIconImage
   properties:
-  - name: handleColor
+  - name: icon
+    type: resource path
+    description: Path to image to use as icon Sprite.
+    aliases:
+    - icon
+- type: ClickableImage
+  properties:
+  - name: clickEvent
+    type: event
+    description: Event that will fire on click.
+    aliases:
+    - click-event
+    - event-click
+  - name: defaultColor
     type: color string
-    description: Color of handle
+    description: Default color of image.
     aliases:
-    - handle-color
-  - name: handleImage
+    - default-color
+  - name: highlightColor
     type: color string
-    description: Path to image to use as handle Sprite.
+    description: Color when this image has a pointer over it.
     aliases:
-    - handle-image
-- type: BSMLScrollableContainer
+    - highlight-color
+  - name: onClick
+    type: UIAction
+    description: UIAction that will fire on click.
+    aliases:
+    - on-click
+- type: ClickableText
   properties:
-  - name: maskOverflow
-    type: bool
-    description: Whether or not to allow objects to extend past the container
+  - name: clickEvent
+    type: event
+    description: Event that will fire on click.
     aliases:
-    - mask-overflow
-  - name: alignBottom
-    type: bool
-    description: Whether or not scrollable goes from bottom to top or top to bottom
+    - click-event
+    - event-click
+  - name: defaultColor
+    type: color string
+    description: Default color of text.
     aliases:
-    - align-bottom
-- type: BSMLScrollView
+    - default-color
+  - name: highlightColor
+    type: color string
+    description: Color when this text has a pointer over it.
+    aliases:
+    - highlight-color
+  - name: onClick
+    type: UIAction
+    description: UIAction that will fire on click.
+    aliases:
+    - on-click
+- type: ContentSizeFitter
   properties:
-  - name: reserveButtonSpace
-    type: bool
-    description: Whether or not the content should go into the button area
+  - name: horizontalFit
+    type: FitMode
+    description: How the width is controlled.
     aliases:
-    - reserve-button-space
-- type: Selectable
+    - horizontal-fit
+  - name: verticalFit
+    type: FitMode
+    description: How the height is controlled.
+    aliases:
+    - vertical-fit
+- type: CustomCellListTableData
   properties:
-  - name: interactable
+  - name: alignCenter
     type: bool
-    description: Whether or not this is interactable
+    description: Whether or not to center the content of the list when there aren't enough items to fill the container.
     aliases:
-    - interactable
-- type: GenericInteractableSetting
+    - align-to-center
+  - name: cellClickable
+    type: bool
+    description: Whether or not cells can be clicked or not.
+    aliases:
+    - clickable-cells
+  - name: cellSize
+    type: float
+    description: width/height of a cell.
+    aliases:
+    - cell-size
+  - name: data
+    type: UIValue(List<object>)
+    description: The data source for the list.
+    aliases:
+    - contents
+    - data
+  - name: listDirection
+    type: TableType
+    description: Whether or not the list is vertical or horizontal.
+    aliases:
+    - list-direction
+  - name: listHeight
+    type: float
+    description: list height, only relevant for horizontal lists.
+    aliases:
+    - list-height
+  - name: listWidth
+    type: float
+    description: list width, only relevant for vertical lists.
+    aliases:
+    - list-width
+  - name: selectCell
+    type: UIAction<TableView, object>
+    description: UIAction to run when a cell is clicked object can be the type of the cell host.
+    aliases:
+    - select-cell
+  - name: showScrollbar
+    type: bool
+    description: Whether or not to show a scroll bar with buttons to scroll this table.
+    aliases:
+    - show-scrollbar
+  - name: visibleCells
+    type: float
+    description: How many cells long/wide to make the list.
+    aliases:
+    - visible-cells
+- type: CustomListTableData
   properties:
-  - name: interactable
+  - name: alignCenter
     type: bool
-    description: Whether or not this setting is interactable
+    description: Whether or not to align the cells to the center.
     aliases:
-    - interactable
-- type: Interactable
+    - align-to-center
+  - name: cellSize
+    type: float
+    description: width/height of a cell.
+    aliases:
+    - cell-size
+  - name: data
+    type: UIValue(List<object>)
+    description: The data source for the list.
+    aliases:
+    - data
+    - content
+  - name: expandCell
+    type: bool
+    description: Whether or not to expand the cell to allow for longer text (only relevant for List style).
+    aliases:
+    - expand-cell
+  - name: listDirection
+    type: TableType
+    description: Whether or not the list is vertical or horizontal.
+    aliases:
+    - list-direction
+  - name: listHeight
+    type: float
+    description: list height, only relevant for horizontal lists.
+    aliases:
+    - list-height
+  - name: listStyle
+    type: ListStyle
+    description: The style of the list cells.
+    aliases:
+    - list-style
+  - name: listWidth
+    type: float
+    description: list width, only relevant for vertical lists.
+    aliases:
+    - list-width
+  - name: selectCell
+    type: UIAction<TableView, int>
+    description: UIAction to run when a cell is clicked, int is index of cell.
+    aliases:
+    - select-cell
+  - name: showScrollbar
+    type: bool
+    description: Whether or not to show a scroll bar with buttons to scroll this table.
+    aliases:
+    - show-scrollbar
+  - name: visibleCells
+    type: float
+    description: How many cells long/wide to make the list.
+    aliases:
+    - visible-cells
+- type: DropDownListSetting
   properties:
-  - name: interactable
-    type: bool
-    description: Whether or not this setting is interactable
+  - name: options
+    type: UIValue(List<object>)
+    description: Dropdown choices.
     aliases:
-    - interactable
+    - options
+    - choices
 - type: FormattableText
   properties:
   - name: data
-    type: object
-    description: The object that will be formatted
+    type: UIValue(object)
+    description: TODO
     aliases:
     - data
   - name: dataFormat
     type: string
-    description: String defining the format
+    description: String defining the format.
     aliases:
     - data-format
   - name: dataFormatter
     type: UIValue(ICustomFormatter)
-    description: The formatter to use for the given object
+    description: The formatter to use for the given object.
     aliases:
     - data-formatter
+- type: GenericSetting
+  properties:
+  - name: applyOnChange
+    type: bool
+    description: Whether or not to immediatly set `value` when setting changes.
+    aliases:
+    - apply-on-change
+  - name: bindValue
+    type: bool
+    description: Whether or not to bind the UIValue given with the `value` property to update the value when NotifyPropertyChanged is called.
+    aliases:
+    - bind-value
+  - name: formatter
+    type: UIAction<type>;string
+    description: How to display a certain setting option.
+    aliases:
+    - formatter
+  - name: getEvent
+    type: event
+    description: When this event is raised the current setting's value will be set to the value of `value`.
+    aliases:
+    - get-event
+  - name: onChange
+    type: UIAction<type>
+    description: UIAction to call when value changes.
+    aliases:
+    - on-change
+  - name: setEvent
+    type: event
+    description: When this event is raised `value` will be set to the current setting's value.
+    aliases:
+    - set-event
+  - name: value
+    type: UIValue(type)
+    description: UIValue of setting type to get from and set to.
+    aliases:
+    - value
+- type: Glowable
+  properties:
+  - name: glowColor
+    type: color string
+    description: The color of the glow ("none" for no glow).
+    aliases:
+    - glow-color
+- type: Graphic
+  properties:
+  - name: raycastPadding
+    type: Vector4
+    description: Padding to be applied to the masking, ordered counter-clockwise (left, bottom, right, top).
+    aliases:
+    - raycast-padding
+  - name: raycastTarget
+    type: bool
+    description: Whether or not this graphic be considered a target for raycasting.
+    aliases:
+    - raycast-target
+- type: GridLayoutGroup
+  properties:
+  - name: cellSize
+    type: Vector2
+    description: The size to use for each cell in the grid.
+    aliases:
+    - cell-size
+  - name: cellSizeX
+    type: float
+    description: Width of each cell in the grid.
+    aliases:
+    - cell-size-x
+  - name: cellSizeY
+    type: float
+    description: Height of each cell in the grid.
+    aliases:
+    - cell-size-y
+  - name: spacing
+    type: Vector2
+    description: The spacing to use between layout elements in the grid.
+    aliases:
+    - spacing
+  - name: spacingX
+    type: float
+    description: Horizontal space between cells.
+    aliases:
+    - spacing-x
+  - name: spacingY
+    type: float
+    description: Vertical space between cells.
+    aliases:
+    - spacing-y
+- type: HorizontalOrVerticalLayoutGroup
+  properties:
+  - name: childControlHeight
+    type: bool
+    description: Whether or not to control the height it's children.
+    aliases:
+    - child-control-height
+  - name: childControlWidth
+    type: bool
+    description: Whether or not to control the width it's children.
+    aliases:
+    - child-control-width
+  - name: childForceExpandHeight
+    type: bool
+    description: Whether or not to force the children to expand to fill additional available vertical space.
+    aliases:
+    - child-expand-height
+  - name: childForceExpandWidth
+    type: bool
+    description: Whether or not to force the children to expand to fill additional available horizontal space.
+    aliases:
+    - child-expand-width
+  - name: spacing
+    type: float
+    description: Space between elements.
+    aliases:
+    - spacing
+- type: IconSegmentedControl
+  properties:
+  - name: data
+    type: UIValue(List<object>)
+    description: The data source for the segmented control.
+    aliases:
+    - contents
+    - data
+  - name: selectCell
+    type: UIAction<SegmentedControl, int>
+    description: Invoked when a cell is selected, parameters give you the SegmentedControl component and index of the selected cell.
+    aliases:
+    - select-cell
+- type: Image
+  properties:
+  - name: image
+    type: resource path
+    description: Path to image to use as Sprite. You can also prefix this with a \# to search for a Sprite from the base game.
+    aliases:
+    - source
+    - src
+  - name: imageColor
+    type: color string
+    description: Color of this image.
+    aliases:
+    - image-color
+    - img-color
+  - name: preserveAspect
+    type: bool
+    description: Whether or not to preserve the aspect ratio of the image.
+    aliases:
+    - preserve-aspect
+- type: IncrementSetting
+  properties:
+  - name: increment
+    type: int/float
+    description: How much to increment/decrement setting on button click.
+    aliases:
+    - increment
+  - name: isInt
+    type: bool
+    description: Whether or not to use int or float.
+    aliases:
+    - integer-only
+  - name: maxValue
+    type: int/float
+    description: Maximum possible value for setting.
+    aliases:
+    - max
+  - name: minValue
+    type: int/float
+    description: Minimum possible value for setting.
+    aliases:
+    - min
+- type: LayoutElement
+  properties:
+  - name: flexibleHeight
+    type: float
+    description: The relative amount of additional available height this layout element should fill out relative to its siblings.
+    aliases:
+    - flexible-height
+  - name: flexibleWidth
+    type: float
+    description: The relative amount of additional available width this layout element should fill out relative to its siblings.
+    aliases:
+    - flexible-width
+  - name: ignoreLayout
+    type: bool
+    description: Whether or not to use layout element.
+    aliases:
+    - ignore-layout
+  - name: minHeight
+    type: float
+    description: The minimum height this layout element should have.
+    aliases:
+    - min-height
+  - name: minWidth
+    type: float
+    description: The minimum width this layout element should have.
+    aliases:
+    - min-width
+  - name: preferredHeight
+    type: float
+    description: The preferred height this layout element should have before additional available height is allocated.
+    aliases:
+    - preferred-height
+    - pref-height
+  - name: preferredWidth
+    type: float
+    description: The preferred width this layout element should have before additional available width is allocated.
+    aliases:
+    - preferred-width
+    - pref-width
+- type: LayoutGroup
+  properties:
+  - name: childAlign
+    type: TextAnchor
+    description: The alignment to use for the child layout elements in the layout group.
+    aliases:
+    - child-align
+  - name: pad
+    type: int
+    description: Padding for all directions.
+    aliases:
+    - pad
+  - name: padBottom
+    type: int
+    description: Bottom padding.
+    aliases:
+    - pad-bottom
+  - name: padLeft
+    type: int
+    description: Left padding.
+    aliases:
+    - pad-left
+  - name: padRight
+    type: int
+    description: Right padding.
+    aliases:
+    - pad-right
+  - name: padTop
+    type: int
+    description: Top padding.
+    aliases:
+    - pad-top
+- type: LeaderboardTableView
+  properties:
+  - name: cellSize
+    type: float
+    description: Height of an entry.
+    aliases:
+    - cell-size
+- type: ListSetting
+  properties:
+  - name: options
+    type: UIValue(List<object>)
+    description: Dropdown choices.
+    aliases:
+    - options
+    - choices
+- type: ListSliderSetting
+  properties:
+  - name: options
+    type: UIValue(List<object>)
+    description: Dropdown choices.
+    aliases:
+    - options
+    - choices
+  - name: showButtons
+    type: bool
+    description: Whether or not to show the left and right buttons.
+    aliases:
+    - show-buttons
+- type: LocalizedTextMeshProUGUI
+  properties:
+  - name: maintainTextAlignment
+    type: bool
+    description: Whether or not to maintain the text alignment regardless of the reading direction of the current language.
+    aliases:
+    - maintain-text-alignment
+  - name: textKey
+    type: localization key
+    description: The localization key for the text to display.
+    aliases:
+    - text-key
+- type: ModalColorPicker
+  properties:
+  - name: onCancel
+    type: UIAction
+    description: Will call this UIAction when cancel is pressed.
+    aliases:
+    - on-cancel
+  - name: onChange
+    type: UIAction<Color>
+    description: Will call this UIAction when the color changes before done is pressed.
+    aliases:
+    - color-change
+  - name: onDone
+    type: UIAction<Color>
+    description: Will call this UIAction when done is pressed with the current Color.
+    aliases:
+    - on-done
+  - name: value
+    type: UIValue(Color)
+    description: Will get from this value on open and set this value on completion.
+    aliases:
+    - value
+- type: ModalKeyboard
+  properties:
+  - name: clearOnOpen
+    type: bool
+    description: Whether or not to clear the keyboard upon opening.
+    aliases:
+    - clear-on-open
+  - name: onEnter
+    type: UIAction<string>
+    description: Will call this UIAction on enter with the text entered.
+    aliases:
+    - on-enter
+  - name: value
+    type: UIValue(string)
+    description: Will get from this value on open and set this value on enter.
+    aliases:
+    - value
+- type: ModalView
+  properties:
+  - name: clickOffCloses
+    type: bool
+    description: Whether or not clicking outside the modal closes it.
+    aliases:
+    - click-off-closes
+    - clickerino-offerino-closerino
+  - name: hideEvent
+    type: event
+    description: When this event is fired the modal will close.
+    aliases:
+    - hide-event
+  - name: moveToCenter
+    type: bool
+    description: Whether or not to center the modal on it's current screen.
+    aliases:
+    - move-to-center
+  - name: showEvent
+    type: event
+    description: When this event is fired the modal will appear.
+    aliases:
+    - show-event
+- type: PageButton
+  properties:
+  - name: direction
+    type: PageButtonDirection
+    description: Direction of the page button.
+    aliases:
+    - dir
+    - direction
+- type: RawImage
+  properties:
+  - name: image
+    type: resource path
+    description: Path to image to use as Texture. You can also prefix this with a \# to search for a Texture from the base game.
+    aliases:
+    - source
+    - src
+- type: RectTransform
+  properties:
+  - name: active
+    type: bool
+    description: Whether or not the GameObject this RectTransform belongs to is active.
+    aliases:
+    - active
+  - name: anchorMax
+    type: Vector2
+    description: The anchor point for the upper right corner of the rectangle defined as a fraction of the size of the parent rectangle.
+    aliases:
+    - anchor-max
+  - name: anchorMaxX
+    type: float
+    description: The normalized x position in the parent RectTransform that the upper right corner is anchored to.
+    aliases:
+    - anchor-max-x
+  - name: anchorMaxY
+    type: float
+    description: The normalized y position in the parent RectTransform that the upper right corner is anchored to.
+    aliases:
+    - anchor-max-y
+  - name: anchorMin
+    type: Vector2
+    description: The anchor point for the lower left corner of the rectangle defined as a fraction of the size of the parent rectangle.
+    aliases:
+    - anchor-min
+  - name: anchorMinX
+    type: float
+    description: The normalized x position in the parent RectTransform that the lower left corner is anchored to.
+    aliases:
+    - anchor-min-x
+  - name: anchorMinY
+    type: float
+    description: The normalized y position in the parent RectTransform that the lower left corner is anchored to.
+    aliases:
+    - anchor-min-y
+  - name: anchorPos
+    type: Vector2
+    description: Position of the rectangle's pivot point relative to the anchors.
+    aliases:
+    - anchored-position
+  - name: anchorPosX
+    type: float
+    description: The x position of the pivot of this RectTransform relative to the anchor reference point.
+    aliases:
+    - anchored-position-x
+    - anchor-pos-x
+  - name: anchorPosY
+    type: float
+    description: The y position of the pivot of this RectTransform relative to the anchor reference point.
+    aliases:
+    - anchored-position-y
+    - anchor-pos-y
+  - name: hoverHint
+    type: string
+    description: Text that will appear when a pointer hovers over.
+    aliases:
+    - hover-hint
+  - name: hoverHintKey
+    type: localization key
+    description: The localization key used for the hover hint text.
+    aliases:
+    - hover-hint-key
+  - name: localScale
+    type: Vector3
+    description: Scale factor applied to the object in the X, Y and Z dimensions.
+    aliases:
+    - local-scale
+    - scale
+  - name: pivot
+    type: Vector2
+    description: The location around which the rectangle rotates.
+    aliases:
+    - pivot
+  - name: pivotX
+    type: float
+    description: Normalized x position to rotate around.
+    aliases:
+    - pivot-x
+  - name: pivotY
+    type: float
+    description: Normalized y position to rotate around.
+    aliases:
+    - pivot-y
+  - name: sizeDelta
+    type: Vector2
+    description: The size added to the rectangle defined by the anchors.
+    aliases:
+    - size-delta
+  - name: sizeDeltaX
+    type: float
+    description: The width added to the rectangle defined by the anchors.
+    aliases:
+    - size-delta-x
+  - name: sizeDeltaY
+    type: float
+    description: The height added to the rectangle defined by the anchors.
+    aliases:
+    - size-delta-y
+- type: Selectable
+  properties:
+  - name: interactable
+    type: bool
+    description: Whether or not this is interactable.
+    aliases:
+    - interactable
+- type: SliderSetting
+  properties:
+  - name: increment
+    type: int/float
+    description: How much to increment/decrement setting on button click.
+    aliases:
+    - increment
+  - name: isInt
+    type: bool
+    description: Whether or not to use int or float.
+    aliases:
+    - integer-only
+  - name: maxValue
+    type: int/float
+    description: Maximum possible value for setting.
+    aliases:
+    - max
+  - name: minValue
+    type: int/float
+    description: Minimum possible value for setting.
+    aliases:
+    - min
+  - name: showButtons
+    type: bool
+    description: Whether or not to show increment/decrement buttons on either side of the slider.
+    aliases:
+    - show-buttons
+- type: Strokable
+  properties:
+  - name: strokeColor
+    type: color string
+    description: Color of the stroke.
+    aliases:
+    - stroke-color
+  - name: strokeType
+    type: StrokeType
+    description: Type of stroke.
+    aliases:
+    - stroke-type
+- type: Tab
+  properties:
+  - name: tabName
+    type: string
+    description: Name of the tab.
+    aliases:
+    - tab-name
+  - name: tabNameKey
+    type: localization key
+    description: The localization key used for the name of the tab.
+    aliases:
+    - tab-name-key
+- type: TabSelector
+  properties:
+  - name: leftButtonTag
+    type: string
+    description: Tag to use to find left button.
+    aliases:
+    - left-button-tag
+  - name: pageCount
+    type: int
+    description: Max amount of items to display, can bind buttons with tags to change page.
+    aliases:
+    - page-count
+  - name: rightButtonTag
+    type: string
+    description: Tag to use to find right button.
+    aliases:
+    - right-button-tag
+  - name: tabTag
+    type: string
+    description: Tag to use to search for tabs.
+    aliases:
+    - tab-tag
+- type: TextMeshProUGUI
+  properties:
+  - name: alignment
+    type: TextAlignmentOptions
+    description: How to align the text.
+    aliases:
+    - font-align
+    - align
+  - name: allUppercase
+    type: bool
+    description: Whether or not to make the text all uppercase.
+    aliases:
+    - all-uppercase
+  - name: bold
+    type: bool
+    description: Whether or not text is bold.
+    aliases:
+    - bold
+  - name: color
+    type: color string
+    description: Color of font.
+    aliases:
+    - font-color
+    - color
+  - name: faceColor
+    type: color string
+    description: Face color of font.
+    aliases:
+    - face-color
+  - name: fontSize
+    type: float
+    description: Size of font.
+    aliases:
+    - font-size
+  - name: italics
+    type: bool
+    description: Whether or not to italicize text.
+    aliases:
+    - italics
+  - name: outlineColor
+    type: color string
+    description: Outline color of font.
+    aliases:
+    - outline-color
+  - name: outlineWidth
+    type: float
+    description: Width of font outline.
+    aliases:
+    - outline-width
+  - name: overflowMode
+    type: TextOverflowModes
+    description: How to handle text overflow.
+    aliases:
+    - overflow-mode
+  - name: raycastTarget
+    type: bool
+    description: Whether or not this graphic be considered a target for raycasting.
+    aliases:
+    - raycast
+  - name: richText
+    type: bool
+    description: Whether or not to enable [rich text](http://digitalnativestudios.com/textmeshpro/docs/rich-text/).
+    aliases:
+    - rich-text
+  - name: strikethrough
+    type: bool
+    description: Whether or not to strikethrough text.
+    aliases:
+    - strikethrough
+  - name: text
+    type: string
+    description: Text to display.
+    aliases:
+    - text
+  - name: underlined
+    type: bool
+    description: Whether or not to underline text.
+    aliases:
+    - underlined
+  - name: wordWrapping
+    type: bool
+    description: Whether or not to wrap text.
+    aliases:
+    - word-wrapping
+- type: TextSegmentedControl
+  properties:
+  - name: data
+    type: TODO
+    description: TODO
+    aliases:
+    - contents
+    - data
+  - name: selectCell
+    type: UIAction<SegmentedControl, int>
+    description: Invoked when a cell is selected, parameters give you the SegmentedControl component and index of the selected cell.
+    aliases:
+    - select-cell

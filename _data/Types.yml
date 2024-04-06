@@ -117,3 +117,12 @@
   values:
   - Vertical
   - Horizontal
+- type: Vector2
+  patterns:
+  - '^((-?((\d+)?\.\d+|\d+)) )?(-?((\d+)?\.\d+|\d+))$'
+- type: Vector3
+  patterns:
+  - '^((-?((\d+)?\.\d+|\d+)) ){0,2}(-?((\d+)?\.\d+|\d+))$'
+- type: Vector4
+  patterns:
+  - '^((-?((\d+)?\.\d+|\d+)) ){0,3}(-?((\d+)?\.\d+|\d+))$'
