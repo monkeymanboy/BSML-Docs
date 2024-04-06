@@ -2,7 +2,7 @@
 `example.bsml`
 ```xml
 <scrollable-settings-container>
-  <slider-setting text='IQ value' min='0' max='220' increment='5' value='iq-value' integer-only='true' />
+  <slider-setting text="IQ value" min="0" max="220" increment="5" value="iq-value" integer-only="true" />
 </scrollable-settings-container>
 ```
 ```csharp

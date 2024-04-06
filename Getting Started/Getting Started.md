@@ -18,14 +18,14 @@ Create a file such as `example.bsml` and add it somewhere in your project. To st
 # Adding content to your template
 When creating your templates you must only have one root node. Let's make a template with a header, some text, and a button.
 ```xml
-<vertical child-control-height='false'>
-  <horizontal bg='panel-top' pad-left='10' pad-right='10' horizontal-fit='PreferredSize'>
-    <text text='Example' align='Center' font-size='10'></text>
+<vertical child-control-height="false">
+  <horizontal bg="panel-top" pad-left="10" pad-right="10" horizontal-fit="PreferredSize">
+    <text text="Example" align="Center" font-size="10"></text>
   </horizontal>
-  <horizontal bg='round-rect-panel' pad='8'>
-    <text text='Looks at this fancy text.'></text>
+  <horizontal bg="round-rect-panel" pad="8">
+    <text text="Looks at this fancy text."></text>
   </horizontal>
-  <button text='Test Button'></button>
+  <button text="Test Button"></button>
 </vertical>
 ```
 The following will look like this in game

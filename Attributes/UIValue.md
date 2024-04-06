@@ -11,7 +11,7 @@ Besides being able to supply tag parameters that accept UIValue's you can also u
 # Example Usage
 All settings tags make use of UIValue so let's look at a bool-setting
 ```xml
-<bool-setting text='Bool Setting' value='bool-value' apply-on-change='true'></bool-setting>
+<bool-setting text="Bool Setting" value="bool-value" apply-on-change="true"></bool-setting>
 ```
 ```csharp
 [UIValue("bool-value")]
@@ -22,7 +22,7 @@ In this example the `bool-setting` will start as `ON` and as soon as it get's sw
 ## Using ~
 Say we have for example a text component but we want it's text to be some string we have in code. Well then we can make use of the ~ prefix.
 ```xml
-<text text='~some-text'></text>
+<text text="~some-text"></text>
 ```
 ```csharp
 [UIValue("some-text")]

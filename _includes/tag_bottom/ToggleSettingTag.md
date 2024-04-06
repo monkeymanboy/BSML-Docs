@@ -2,7 +2,7 @@
 `example.bsml`
 ```xml
 <scrollable-settings-container>
-  <toggle-setting text='Cool switch' value='cool-switch'></toggle-setting>
+  <toggle-setting text="Cool switch" value="cool-switch"></toggle-setting>
 </scrollable-settings-container>
 ```
 ```csharp

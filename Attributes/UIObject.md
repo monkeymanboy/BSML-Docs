@@ -8,7 +8,7 @@ The UIObject attribute can only be applied to fields. The type of the field must
 
 # Example Usage
 ```xml
-<text id='whatever'></text>
+<text id="whatever"></text>
 ```
 ```csharp
 [UIObject("whatever")]

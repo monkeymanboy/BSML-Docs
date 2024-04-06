@@ -1,17 +1,17 @@
 # Example Usage
 `example.bsml`
 ```xml
-<vertical child-control-height='false'>
-  <horizontal bg='panel-top' pad-left='15' pad-right='15' horizontal-fit='PreferredSize'>
-    <text text='Buttons' align='Center' font-size='8'/>
+<vertical child-control-height="false">
+  <horizontal bg="panel-top" pad-left="15" pad-right="15" horizontal-fit="PreferredSize">
+    <text text="Buttons" align="Center" font-size="8"/>
   </horizontal>
-  <horizontal horizontal-fit='PreferredSize' spacing='10'>
-    <primary-button text='Click!' on-click='click-btn-action'/>
-    <primary-button text='Clack!' on-click='clack-btn-action'/>
+  <horizontal horizontal-fit="PreferredSize" spacing="10">
+    <primary-button text="Click!" on-click="click-btn-action"/>
+    <primary-button text="Clack!" on-click="clack-btn-action"/>
   </horizontal>
-  <horizontal horizontal-fit='PreferredSize' spacing='10'>
-    <primary-button text='Cluck!' on-click='cluck-btn-action'/>
-    <primary-button text='Clock!' on-click='clock-btn-action'/>
+  <horizontal horizontal-fit="PreferredSize" spacing="10">
+    <primary-button text="Cluck!" on-click="cluck-btn-action"/>
+    <primary-button text="Clock!" on-click="clock-btn-action"/>
   </horizontal>
 </vertical>
 ```

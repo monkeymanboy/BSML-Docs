@@ -3,10 +3,10 @@
 ```xml
 <vertical horizontal-fit="Unconstrained">
   <horizontal vertical-fit="Unconstrained">
-    <text-page text='~lorem-ipsum' />
+    <text-page text="~lorem-ipsum" />
   </horizontal>
   <horizontal vertical-fit="Unconstrained">
-    <text-page text='~lorem-ipsum-r' />
+    <text-page text="~lorem-ipsum-r" />
   </horizontal>
 </vertical>
 ```

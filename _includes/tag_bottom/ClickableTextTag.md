@@ -1,19 +1,19 @@
 # Example Usage
 `example.bsml`
 ```xml
-<vertical child-control-height='false'>
-  <horizontal bg='panel-top' pad-left='15' pad-right='15' horizontal-fit='PreferredSize'>
-    <text text='Clickable Text' align='Center' font-size='8'/>
+<vertical child-control-height="false">
+  <horizontal bg="panel-top" pad-left="15" pad-right="15" horizontal-fit="PreferredSize">
+    <text text="Clickable Text" align="Center" font-size="8"/>
   </horizontal>
-  <horizontal horizontal-fit='PreferredSize' spacing='5'>
-    <vertical bg='round-rect-panel' pad-left='5' pad-right='5'>
-      <clickable-text align='Center' text='Click this!' on-click='link-click-action'></clickable-text>
+  <horizontal horizontal-fit="PreferredSize" spacing="5">
+    <vertical bg="round-rect-panel" pad-left="5" pad-right="5">
+      <clickable-text align="Center" text="Click this!" on-click="link-click-action"></clickable-text>
     </vertical>
-    <vertical bg='round-rect-panel' pad-left='5' pad-right='5'>
-      <text align='Center' text="Can't click this!"></text>
+    <vertical bg="round-rect-panel" pad-left="5" pad-right="5">
+      <text align="Center" text="Can't click this!"></text>
     </vertical>
-    <vertical bg='round-rect-panel' pad-left='5' pad-right='5'>
-      <clickable-text align='Center' text='Click this!' on-click='link2-click-action'></clickable-text>
+    <vertical bg="round-rect-panel" pad-left="5" pad-right="5">
+      <clickable-text align="Center" text="Click this!" on-click="link2-click-action"></clickable-text>
     </vertical>
   </horizontal>
 </vertical>

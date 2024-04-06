@@ -3,8 +3,8 @@
 ```xml  
 <settings-container>
   <!--.. whatever settings components you want inside ..-->
-  <bool-setting text='Cool switch' value='cool-switch'></bool-setting>
-  <string-setting text='Nice text' value='nice-text'></string-setting>
+  <bool-setting text="Cool switch" value="cool-switch"></bool-setting>
+  <string-setting text="Nice text" value="nice-text"></string-setting>
 </settings-container>
 ```
 ```csharp

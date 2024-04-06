@@ -2,7 +2,7 @@
 `example.bsml`
 ```xml
 <scrollable-settings-container>
-  <list-slider-setting text='Best staff' value='list-choice' choices='list-options' />
+  <list-slider-setting text="Best staff" value="list-choice" choices="list-options" />
 </scrollable-settings-container>
 ```
 ```csharp

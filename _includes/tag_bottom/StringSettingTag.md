@@ -2,7 +2,7 @@
 `example.bsml`
 ```xml
 <scrollable-settings-container>
-  <string-setting text='Nice text' value='nice-text'></string-setting>
+  <string-setting text="Nice text" value="nice-text"></string-setting>
 </scrollable-settings-container>
 ```
 ```csharp

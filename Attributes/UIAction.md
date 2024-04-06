@@ -11,7 +11,7 @@ You can also make a UIAction respond to events by making it's id a # followed by
 # Example Usage
 A button can take in a UIAction for it's on-click
 ```xml
-<button text='Button' on-click='click'></button>
+<button text="Button" on-click="click"></button>
 ```
 ```csharp
 [UIAction("click")]

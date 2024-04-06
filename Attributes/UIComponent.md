@@ -8,7 +8,7 @@ The UIComponent attribute can only be applied to fields. The type of the field t
 
 # Example Usage
 ```xml
-<text id='whatever'></text>
+<text id="whatever"></text>
 ```
 ```csharp
 [UIComponent("whatever")]
