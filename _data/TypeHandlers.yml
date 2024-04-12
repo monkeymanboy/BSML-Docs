@@ -89,6 +89,11 @@
     description: Path to image to use as icon Sprite.
     aliases:
     - icon
+  - name: iconSkew
+    type: float
+    description: The amount of skew to apply to the icon. Set to "true" to use the button's default skew value.
+    aliases:
+    - icon-skew
 - type: ClickableImage
   properties:
   - name: clickEvent
@@ -283,6 +288,13 @@
     description: The formatter to use for the given object.
     aliases:
     - data-formatter
+- type: GenericInteractableSetting
+  properties:
+  - name: interactable
+    type: bool
+    description: Whether or not this setting is interactable.
+    aliases:
+    - interactable
 - type: GenericSetting
   properties:
   - name: applyOnChange
@@ -339,6 +351,7 @@
     description: Whether or not this graphic be considered a target for raycasting.
     aliases:
     - raycast-target
+    - raycast
 - type: GridLayoutGroup
   properties:
   - name: cellSize
@@ -497,11 +510,13 @@
     type: TextAnchor
     description: The alignment to use for the child layout elements in the layout group.
     aliases:
+    - child-alignment
     - child-align
   - name: pad
     type: int
     description: Padding for all directions.
     aliases:
+    - padding
     - pad
   - name: padBottom
     type: int
@@ -711,6 +726,11 @@
     aliases:
     - local-scale
     - scale
+  - name: name
+    type: string
+    description: The name of the GameObject.
+    aliases:
+    - name
   - name: pivot
     type: Vector2
     description: The location around which the rectangle rotates.
@@ -875,11 +895,6 @@
     description: How to handle text overflow.
     aliases:
     - overflow-mode
-  - name: raycastTarget
-    type: bool
-    description: Whether or not this graphic be considered a target for raycasting.
-    aliases:
-    - raycast
   - name: richText
     type: bool
     description: Whether or not to enable [rich text](http://digitalnativestudios.com/textmeshpro/docs/rich-text/).
@@ -905,6 +920,13 @@
     description: Whether or not to wrap text.
     aliases:
     - word-wrapping
+- type: TextPageScrollView
+  properties:
+  - name: text
+    type: string
+    description: The text to display in the scroll view.
+    aliases:
+    - text
 - type: TextSegmentedControl
   properties:
   - name: data
