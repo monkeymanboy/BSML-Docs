@@ -288,13 +288,6 @@
     description: The formatter to use for the given object.
     aliases:
     - data-formatter
-- type: GenericInteractableSetting
-  properties:
-  - name: interactable
-    type: bool
-    description: Whether or not this setting is interactable.
-    aliases:
-    - interactable
 - type: GenericSetting
   properties:
   - name: applyOnChange
@@ -920,13 +913,6 @@
     description: Whether or not to wrap text.
     aliases:
     - word-wrapping
-- type: TextPageScrollView
-  properties:
-  - name: text
-    type: string
-    description: The text to display in the scroll view.
-    aliases:
-    - text
 - type: TextSegmentedControl
   properties:
   - name: data
