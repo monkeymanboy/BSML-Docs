@@ -4,10 +4,11 @@
   - 'false'
 - type: background string
   values:
-  - round-rect-panel
-  - panel-top
   - panel-fade-gradient
+  - panel-top
   - panel-top-gradient
+  - round-rect-panel
+  - title-gradient
 - type: color string
   patterns:
   - ([#][a-fA-F0-9]*)
