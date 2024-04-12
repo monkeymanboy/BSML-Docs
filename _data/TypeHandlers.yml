@@ -91,9 +91,14 @@
     - icon
   - name: iconSkew
     type: float
-    description: The amount of skew to apply to the icon. Set to "true" to use the button's default skew value.
+    description: The amount of skew to apply to the icon.
     aliases:
     - icon-skew
+  - name: showUnderline
+    type: bool
+    description: Whether or not to show an underline on the button.
+    aliases:
+    - show-underline
 - type: ClickableImage
   properties:
   - name: clickEvent
